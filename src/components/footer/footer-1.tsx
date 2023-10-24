@@ -115,8 +115,11 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
                   </Link>
                 </NextLink>
               </DarkMode>
+
               <Text>{Site.slogan}</Text>
-              <Divider borderColor="gray.600" />
+
+              {/* <Divider borderColor="gray.600" /> */}
+
               <VStack align="stretch" spacing={[4]}>
                 <Stack
                   w="full"
@@ -129,13 +132,13 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
                     placeholder={"Enter your email"}
                     borderColor={"gray.600"}
                   />
-                  <Button flex="1 0 auto">Subscribe</Button>
+                  <Button flex="1 0 auto">Submit</Button>
                 </Stack>
                 <Text color={color} fontSize="sm">
-                  If you subscribe to our weekly newsletter, you will be
-                  informed about the developments regularly.
+                If you have any opinions or feedback, you can email us.
                 </Text>
               </VStack>
+
             </Stack>
             <SimpleGrid w="full" flex="2" columns={[1, 2, 2, 3]} spacing={[10]}>
               {FooterNavItems.map((item, idx) => (
@@ -174,9 +177,9 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
             </SimpleGrid>
           </Stack>
 
-          <Divider borderColor="gray.600" />
+          {/* <Divider borderColor="gray.600" /> */}
 
-          <Stack
+          {/* <Stack
             direction={["column", "column", "row"]}
             justify="space-between"
             width="full"
@@ -187,11 +190,12 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
                 fontSize="sm"
                 textAlign={["center", "center", "start", "start"]}
               >
-                © All rights reserved. Senco LLC. Powered by Themebiotic.
+                © All rights reserved. AIDU.
               </Text>
             </Stack>
             <FooterIcons />
-          </Stack>
+          </Stack> */}
+          
         </VStack>
       </Container>
     </Box>

@@ -107,10 +107,10 @@ const CompanyItems = [
     title: "Terms of Service",
     href: "/terms",
   },
-  {
-    title: "Return policy",
-    href: "#",
-  },
+  // {
+  //   title: "Return policy",
+  //   href: "#",
+  // },
 ];
 
 const ResourcesItems = [
@@ -137,26 +137,26 @@ const NavigationItems: T_NavItems[] = [
     href: "",
     subitems: CompanyItems,
   },
-  {
-    title: "Home Pages",
-    href: "#",
-    subitems: HomePageItems,
-  },
-  {
-    title: "Blog Pages",
-    href: "#",
-    subitems: BlogPageItems,
-  },
-  {
-    title: "Pricing Pages",
-    href: "#",
-    subitems: PricingPageItems,
-  },
-  {
-    title: "Common Pages",
-    href: "#",
-    subitems: CommponPageItems,
-  },
+  // {
+  //   title: "Home Pages",
+  //   href: "#",
+  //   subitems: HomePageItems,
+  // },
+  // {
+  //   title: "Blog Pages",
+  //   href: "#",
+  //   subitems: BlogPageItems,
+  // },
+  // {
+  //   title: "Pricing Pages",
+  //   href: "#",
+  //   subitems: PricingPageItems,
+  // },
+  // {
+  //   title: "Common Pages",
+  //   href: "#",
+  //   subitems: CommponPageItems,
+  // },
   {
     title: "Get Help",
     href: "",
@@ -164,5 +164,6 @@ const NavigationItems: T_NavItems[] = [
     children: <CountrySelect />,
   },
 ];
+
 
 export default NavigationItems;
