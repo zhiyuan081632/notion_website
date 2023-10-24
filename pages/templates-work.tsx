@@ -55,7 +55,7 @@ const Home: React.FC = () => {
         description="Senco React E-Commerce Website Template"
       />
       <chakra.main>
-        <VStack mb={32} spacing={10}>
+        <VStack mb={32} spacing={20}>
           {/* <HeroBlock
             title="Using a premium E-Commerce template can assist you in turning visitors into buyers"
             body="Senco is the ideal e-commerce template to power your startup's website, with a variety of pages and layout possibilities, several content sections, and a user interface that is simple to customize."
@@ -63,22 +63,26 @@ const Home: React.FC = () => {
           <Divider borderColor="gray.600" />
           <ScreenshotBlock
             subtitle=""
-            title=""
+            title="Work Templates"
             items={[
               {
-                href: "https://www.notion.so/templates/course-schedule",
-                title: "Course schedule",
-                image: "/images/notion/Course_schedule.png",
+                image: "/images/notion/ProjectTasks.png",
+                title: "Projects & Tasks",
+                href: "https://notion.notion.site/Projects-Tasks-917351934a38469cad1921b33d88bc32",
+                
+                
               },
               {
-                href: "/home-2",
-                title: "Homepage 2",
-                image: "/images/page-home-2.png",
+                image: "/images/notion/Meetings.png",
+                title: "Meetings",
+                href: "https://notion-templates.notion.site/a91e6b04d7824974b5236c4519a54f50?v=e0558ef13f2a40f99af3ddcdc4bc91b7",
+                
+                
               },
               {
-                href: "/home-3",
-                title: "Homepage 3",
-                image: "/images/page-home-3.png",
+                image: "/images/notion/Resume.png",
+                title: "Resume",
+                href: "https://notion-templates.notion.site/b5c44d6066554f28a7a0edd81828f572",
               },
             ]}
           />
@@ -87,19 +91,19 @@ const Home: React.FC = () => {
             title=""
             items={[
               {
-                image: "/images/page-pricing-1.png",
-                title: "Pricing 1",
-                href: "/pricing-1",
+                image: "/images/notion/ProductRoadmap.png",
+                title: "Product Roadmap",
+                href: "https://notion.notion.site/Product-roadmap-c5e8829bb9644dd08c576452ee200404",
               },
               {
-                image: "/images/page-pricing-2.png",
-                title: "Pricing 2",
-                href: "/pricing-2",
+                image: "/images/notion/ResearchPaper.png",
+                title: "Presentation",
+                href: "https://notion-templates.notion.site/Presentation-e4bcde5ba9af4ca3804884ed66114db6",
               },
               {
-                image: "/images/page-pricing-3.png",
-                title: "Pricing 3",
-                href: "/pricing-3",
+                image: "/images/notion/DesignerPortfolio.png",
+                title: "Designer Portfolio",
+                href: "https://notion.notion.site/Designer-Portfolio-3ec813d3fb8c49e5b0140e062d72b5ba",
               },
             ]}
           />
@@ -110,116 +114,23 @@ const Home: React.FC = () => {
             // columns={[1, 1, 3, 4]}
             items={[
               {
-                image: "/images/page-blog-1.png",
-                title: "Blog 1",
-                href: "/blog-1",
+                image: "/images/notion/BufferOKRs.png",
+                title: "Buffer's OKRs",
+                href: "https://www.notion.so/Buffer-s-OKRs-b80caa7ddc5647d0814ec7edc18b4738",
               },
               {
-                image: "/images/page-blog-2.png",
-                title: "Blog 2",
-                href: "/blog-2",
+                image: "/images/notion/SupportTaskList.png",
+                title: "Support Task List",
+                href: "https://www.notion.so/a440ec844f6247219d70ac65f1f1af5d?v=fe1ae79309524069ac9041666cf8de95",
               },
               {
-                image: "/images/page-blog-3.png",
-                title: "Blog 3",
-                href: "/blog-3",
+                image: "/images/notion/DailyPlanner.png",
+                title: "Daily Planner",
+                href: "https://thekavisha.notion.site/Daily-Planner-2a56f753b10a424db9de084d10d0726c",
               },
             ]}
           />
-          {/* CTA */}
-          {/* <SectionBlock
-            subtitle="Components"
-            title="Pre-designed pages, blocks & components to help you design the perfect commerce website"
-          /> */}
-
-          {/* Other */}
-          {/* <ScreenshotBlock
-            subtitle="Shared Pages"
-            title="Everything you require to begin going and progress are all on these pages"
-            items={[
-              {
-                href: "/about",
-                title: "About",
-                image: "/images/page-about.png",
-              },
-              {
-                href: "/checkout",
-                title: "Checkout",
-                image: "/images/page-checkout.png",
-              },
-              {
-                href: "/shopping-cart",
-                title: "Shopping Cart",
-                image: "/images/page-shopping-cart.png",
-              },
-              {
-                href: "/product-overview",
-                title: "Product Overview",
-                image: "/images/page-product-overview.png",
-              },
-              {
-                href: "/filtered-products",
-                title: "Filtered Products",
-                image: "/images/page-filtered-products.png",
-              },
-              {
-                href: "/contact",
-                title: "Contact",
-                image: "/images/page-contact.png",
-              },
-              {
-                href: "/invoice",
-                title: "Invoice",
-                image: "/images/page-invoice.png",
-              },
-              {
-                href: "/help",
-                title: "Help & Support",
-                image: "/images/page-help.png",
-              },
-              {
-                href: "/terms",
-                title: "Terms of Service",
-                image: "/images/page-terms.png",
-              },
-              {
-                image: "/images/page-blog-post.png",
-                title: "Blog Post",
-                href: "/blog-post",
-              },
-            ]}
-          />
-          <CTABlock /> */}
-          {/* Account pages */}
-          {/* <ScreenshotBlock
-            subtitle="Account Pages"
-            title="Account pages to make it easier for people to sign up and get started"
-            height={300}
-            width={400}
-            columns={[1, 1, 2, 4]}
-            items={[
-              {
-                href: "/account/sign-in",
-                title: "Sign In",
-                image: "/images/page-account-sign-in.png",
-              },
-              {
-                href: "/account/sign-up",
-                title: "Sign Up",
-                image: "/images/page-account-sign-up.png",
-              },
-              {
-                href: "/account/forgot-password",
-                title: "Forgot Password",
-                image: "/images/page-account-forgot-password.png",
-              },
-              {
-                href: "/account/reset-password",
-                title: "Reset Password",
-                image: "/images/page-account-reset-password.png",
-              },
-            ]}
-          /> */}
+          
         </VStack>
       </chakra.main>
     </>

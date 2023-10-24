@@ -55,7 +55,7 @@ const Home: React.FC = () => {
         description="Senco React E-Commerce Website Template"
       />
       <chakra.main>
-        <VStack mb={32} spacing={10}>
+        <VStack mb={32} spacing={20}>
           {/* <HeroBlock
             title="Using a premium E-Commerce template can assist you in turning visitors into buyers"
             body="Senco is the ideal e-commerce template to power your startup's website, with a variety of pages and layout possibilities, several content sections, and a user interface that is simple to customize."
@@ -63,7 +63,7 @@ const Home: React.FC = () => {
           <Divider borderColor="gray.600" />
           <ScreenshotBlock
             subtitle=""
-            title=""
+            title="School Templates"
             items={[
               {
                 image: "/images/notion/CourseSchedule.png",
