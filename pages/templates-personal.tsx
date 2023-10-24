@@ -48,8 +48,6 @@ import Image from "@components/image";
 
 import CTA from "@blocks/cta";
 
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SchoolTemplatesPage from './templates-school'; // 导入新页面组件
 
 
@@ -97,220 +95,121 @@ const Home3Page: React.FC = () => {
               bottom={0}
             />
           </Box> */}
+
+        {/* <Text variant="subtitle" data-aos="fade-up">
+        </Text> */}
+        <Heading
+            as="h1"
+            size="3xl"
+            data-aos="fade-up"
+            data-aos-delay="50"
+        >
+            Personal Templates
+        </Heading>
+
+
         <Divider borderColor="gray.600" />
 
+        <RelatedPostsBlock
+          items={[
+            {
+              href: "#",
+              image: "/images/notion/student_life.png",
+              subtitle: "Product Roadmap",
+              title:
+                "Level up your process with powerful templates that help you go from an idea to building a winning product.",
+              meta: "8 min read",
+              // date: "Sep 12, 2022 21:43",
+              date: new Date(new Date().getTime() - 13 * 60000).toString(),
+            },
+            {
+              href: "#",
+              image: "/images/notion/college_budgeting.png",
+              subtitle: "Product Requirements",
+              title:
+                "college budgeting",
+              meta: "9 min read",
+              date: "Aug 18, 2022 19:34",
+            },
+            {
+              href: "#",
+              image: "/images/notion/cfaft_club.png",
+              subtitle: "Product Lauch Plan",
+              title:
+                "Crafts n’ Creations Club Organization",
+              meta: "7 min read",
+              date: "Aug 10, 2022 18:25",
+            },
+          ]}
+        />
+        
+        <RelatedPostsBlock
+          items={[
+            {
+              href: "#",
+              image: "/images/notion/student_life.png",
+              subtitle: "tag: #Student #College",
+              title:
+                "Student Life Garden Dashboard",
+              meta: "8 min read",
+              // date: "Sep 12, 2022 21:43",
+              date: new Date(new Date().getTime() - 13 * 60000).toString(),
+            },
+            {
+              href: "#",
+              image: "/images/notion/college_budgeting.png",
+              subtitle: "tag: #Student #Collegeg",
+              title:
+                "college budgeting",
+              meta: "9 min read",
+              date: "Aug 18, 2022 19:34",
+            },
+            {
+              href: "#",
+              image: "/images/notion/cfaft_club.png",
+              subtitle: "tag: #Student #Collegeg",
+              title:
+                "Crafts n’ Creations Club Organization",
+              meta: "7 min read",
+              date: "Aug 10, 2022 18:25",
+            },
+          ]}
+        />
 
-        <Stack
-          overflow="hidden"
-          width="full"
-          direction={["column", "column", "row"]}
-        >
-          <AspectRatio
-            data-aos="fade-right"
-            ratio={4 / 3}
-            maxW={768}
-            minW={"50%"}
-            // maxH={400}
-            width="full"
-            height="full"
-            pos="relative"
-            zIndex={1}
-          >
-            <Image
-              src={"/images/home-2/product-0-silver.jpeg"}
-              alt="Senco product image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              borderEndRadius={["none", "none", "2xl", "2xl"]}
-            />
-          </AspectRatio>
-          <Flex
-            data-aos="fade-left"
-            align={["start", "start", "center", "center"]}
-            justify={["start", "start", "center", "center"]}
-            width="full"
-            p={[5, 5, 10, 20]}
-          >
-            <VStack align="start" width="full">
-              <Text fontSize="lg" fontWeight="semibold">
-                School Templates
-              </Text>
-              <Text>
-                Maximize your academic potential with these student templates. 
-                Organize class notes, homework assignments, and projects with ease. 
-                Keep track of your grades and goals and improve your academic performance with Notion tools.
-              </Text>
+        <RelatedPostsBlock
+          items={[
+            {
+              href: "#",
+              image: "/images/notion/student_life.png",
+              subtitle: "tag: #Student #College",
+              title:
+                "Student Life Garden Dashboard",
+              meta: "8 min read",
+              // date: "Sep 12, 2022 21:43",
+              date: new Date(new Date().getTime() - 13 * 60000).toString(),
+            },
+            {
+              href: "#",
+              image: "/images/notion/college_budgeting.png",
+              subtitle: "tag: #Student #Collegeg",
+              title:
+                "college budgeting",
+              meta: "9 min read",
+              date: "Aug 18, 2022 19:34",
+            },
+            {
+              href: "#",
+              image: "/images/notion/cfaft_club.png",
+              subtitle: "tag: #Student #Collegeg",
+              title:
+                "Crafts n’ Creations Club Organization",
+              meta: "7 min read",
+              date: "Aug 10, 2022 18:25",
+            },
+          ]}
+        />
 
-              <Link
-                    href="/templates-school"
-                    fontWeight="bold"
-                    variant="underline"
-                  >
-                    Read More
-              </Link>
 
-                
-
-            </VStack>
-          </Flex>
-        </Stack>
-
-        <Stack
-          overflow="hidden"
-          width="full"
-          direction={["column-reverse", "column-reverse", "row"]}
-        >
-          <Flex
-            data-aos="fade-right"
-            align={["start", "start", "center", "center"]}
-            justify={["start", "start", "center", "center"]}
-            width="full"
-            p={[5, 5, 10, 20]}
-          >
-            <VStack align="start" width="full">
-              <Text fontSize="lg" fontWeight="semibold">
-                Work Templates
-              </Text>
-              <Text>
-                Ready to elevate your work with best practices from leading companies and experts? 
-                These easy-to-use templates can help you simplify how you and your team get stuff done.
-              </Text>
-              <Link
-                    href="/templates-work"
-                    fontWeight="bold"
-                    variant="underline"
-                  >
-                    Read More
-              </Link>
-            </VStack>
-          </Flex>
-          <AspectRatio
-            data-aos="fade-left"
-            ratio={4 / 3}
-            maxW={768}
-            minW={"50%"}
-            // maxH={400}
-            width="full"
-            height="full"
-            pos="relative"
-            zIndex={1}
-            bg="#f6f6f8"
-            borderStartRadius={["none", "none", "2xl", "2xl"]}
-          >
-            <Image
-              src={"/images/home-2/product-0-silver-1.jpeg"}
-              alt="Senco product image"
-              layout="fill"
-              objectFit="contain"
-              objectPosition="center"
-            />
-          </AspectRatio>
-        </Stack>
-
-        <Stack
-          overflow="hidden"
-          width="full"
-          direction={["column", "column", "row"]}
-        >
-          <AspectRatio
-            data-aos="fade-right"
-            ratio={4 / 3}
-            maxW={768}
-            minW={"50%"}
-            // maxH={400}
-            width="full"
-            height="full"
-            pos="relative"
-            zIndex={1}
-          >
-            <Image
-              src={"/images/home-2/product-0-silver.jpeg"}
-              alt="Senco product image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              borderEndRadius={["none", "none", "2xl", "2xl"]}
-            />
-          </AspectRatio>
-          <Flex
-            data-aos="fade-left"
-            align={["start", "start", "center", "center"]}
-            justify={["start", "start", "center", "center"]}
-            width="full"
-            p={[5, 5, 10, 20]}
-          >
-            <VStack align="start" width="full">
-              <Text fontSize="lg" fontWeight="semibold">
-                Projects Templates
-              </Text>
-              <Text>
-                Bring your projects to life with Notion's project management templates. 
-                Plan, organize, and collaborate with your team all in one centralized location.
-              </Text>
-              <Link
-                    href="/templates-projects"
-                    fontWeight="bold"
-                    variant="underline"
-                  >
-                    Read More
-              </Link>
-            </VStack>
-          </Flex>
-        </Stack>
-
-        <Stack
-          overflow="hidden"
-          width="full"
-          direction={["column-reverse", "column-reverse", "row"]}
-        >
-          <Flex
-            data-aos="fade-right"
-            align={["start", "start", "center", "center"]}
-            justify={["start", "start", "center", "center"]}
-            width="full"
-            p={[5, 5, 10, 20]}
-          >
-            <VStack align="start" width="full">
-              <Text fontSize="lg" fontWeight="semibold">
-              Personal templates
-              </Text>
-              <Text>
-                Need a better way to organize your life? 
-                From daily schedules and to-do lists to home info and habit trackers, 
-                Notion's personal templates have you covered for whatever life throws at you.
-              </Text>
-              <Link
-                    href="/templates-personal"
-                    fontWeight="bold"
-                    variant="underline"
-                  >
-                    Read More
-              </Link>
-            </VStack>
-          </Flex>
-          <AspectRatio
-            data-aos="fade-left"
-            ratio={4 / 3}
-            maxW={768}
-            minW={"50%"}
-            // maxH={400}
-            width="full"
-            height="full"
-            pos="relative"
-            zIndex={1}
-            bg="#f6f6f8"
-            borderStartRadius={["none", "none", "2xl", "2xl"]}
-          >
-            <Image
-              src={"/images/home-2/product-0-silver-1.jpeg"}
-              alt="Senco product image"
-              layout="fill"
-              objectFit="contain"
-              objectPosition="center"
-            />
-          </AspectRatio>
-        </Stack>
         </VStack>
       </chakra.main>
     </>
@@ -332,7 +231,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
         width="full"
         // minHeight="100vh"
       >
-        <Flex
+        {/* <Flex
           pos="relative"
           bg="pink.50"
           flex="1"
@@ -347,7 +246,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
             src="/images/notion/notion_index.png"
             alt="Notion home 3 hero"
           />
-        </Flex>
+        </Flex> */}
 
       
 
@@ -358,7 +257,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
               align={["center", "center", "start"]}
               spacing={4}
             >
-              <Flex justify={["center", "center", "start"]} flexWrap="wrap">
+              {/* <Flex justify={["center", "center", "start"]} flexWrap="wrap">
                 <Heading
                   data-aos="fade-up"
                   fontSize={heading}
@@ -394,29 +293,8 @@ const HeroBlock: React.FC<BlockProps> = () => {
                 maxW={450}
               >
                 At our company, we make work easier. Explore our Notion templates for all your tasks and projects, and boost your productivity.
-              </Text>
+              </Text> */}
               
-
-              <InputGroup>
-                {/* <InputLeftElement pointerEvents="none">
-                  <SearchIcon color="gray.300" />
-                </InputLeftElement> */}
-                <Input
-                  type="text"
-                  placeholder="Search Notion Templates"
-                  borderColor="blue.500"
-                  borderWidth="2px"
-                  _hover={{ borderColor: 'blue.600' }}
-                  _focus={{ borderColor: 'blue.600' }}
-                />
-
-              <InputRightElement width="4.5rem">
-                <Button h="1.75rem" size="sm" onClick={handleSearch}>
-                  <SearchIcon />
-                </Button>
-              </InputRightElement>
-
-              </InputGroup>
 
               {/* <Button
                 data-aos="fade-up"
@@ -443,190 +321,6 @@ function handleSearch() {
   // 处理搜索逻辑
 }
 
-// const OverlayTwoBlock: React.FC<BlockProps> = () => {
-//   const items = [
-//     {
-//       title: "Seasonal Essentials",
-//       body: "Women's Glamorous Eyelash Extensions",
-//       href: "#",
-//       link: "SHOP NOW",
-//       image: "https://source.unsplash.com/9pszsLaXh7A",
-//       colorScheme: "amber",
-//       color: "white",
-//     },
-//     {
-//       title: "Start Fresh",
-//       body: "New Makeup Removers",
-//       href: "#",
-//       link: "SHOP NOW",
-//       image: "https://source.unsplash.com/y_CSTKJ0bEs",
-//       colorScheme: "pink",
-//       color: "white",
-//     },
-//   ];
-//   return (
-//     <Box width="full">
-//       <Container maxW="container.xl">
-//         <SimpleGrid columns={[1, 1, 2]} spacing={[10, 10, 10, 20]}>
-//           {items.map((item, idx) => (
-//             <Box
-//               data-aos="fade-up"
-//               data-aos-delay={100 * idx}
-//               key={item.body + idx}
-//               pos="relative"
-//             >
-//               <Box
-//                 pos="absolute"
-//                 width="full"
-//                 height="full"
-//                 sx={{ "& > *": { width: "full", height: "full" } }}
-//                 zIndex={0}
-//               >
-//                 <Image
-//                   layout="fill"
-//                   objectFit="cover"
-//                   src={item.image}
-//                   alt={item.title}
-//                 />
-//               </Box>
-//               <AspectRatio ratio={1}>
-//                 <VStack
-//                   // color="whiteAlpha.800"
-//                   color={item.color}
-//                   // textShadow="1px 2px 10px rgb(0 0 0 / 30%)"
-//                   textAlign="center"
-//                   p={6}
-//                   spacing={6}
-//                 >
-//                   <Text fontSize="sm" textTransform="uppercase">
-//                     {item.title}
-//                   </Text>
-//                   <Text fontSize="2xl" fontWeight="semibold">
-//                     {item.body}
-//                   </Text>
-//                   <Link
-//                     href={item.href}
-//                     fontWeight="bold"
-//                     colorScheme={item.colorScheme}
-//                     variant="underline"
-//                   >
-//                     {item.link}
-//                   </Link>
-//                 </VStack>
-//               </AspectRatio>
-//             </Box>
-//           ))}
-//         </SimpleGrid>
-//       </Container>
-//     </Box>
-//   );
-// };
-
-// const ProductCarouselBlock: React.FC<BlockProps> = () => {
-//   const items = [
-//     {
-//       image: "https://source.unsplash.com/E1rH__X9SA0",
-//       title: "Research Project Template",
-//       price: 27.0,
-//     },
-//     {
-//       image: "https://source.unsplash.com/PdzMmdHqN2c",
-//       title: "Skincare Collagen Face Moisturizer",
-//       price: 39.9,
-//     },
-//     {
-//       image: "https://source.unsplash.com/8gnFtRwmQzs",
-//       title: "Loose Finishing Powder",
-//       price: 17.0,
-//     },
-//     {
-//       image: "https://source.unsplash.com/ip5MQahc8mE",
-//       title: "Neutral Nail Polish",
-//       price: 9.99,
-//     },
-//     {
-//       image: "https://source.unsplash.com/LtGwgq7r_mc",
-//       title: "Biodermic Peeling Shampoo",
-//       price: 19.0,
-//     },
-//   ];
-
-//   const gap = useBreakpointValue({ base: 10, md: 50, lg: 100 });
-
-//   return (
-//     <Box overflow="hidden" width="full">
-//       <Container pos="relative" maxW="container.xl">
-//         <SimpleGrid columns={[1, 1, 3]} spacing={[10, 10, 20]}> */}
-
-//         <Heading
-//           mx="auto"
-//           fontWeight={900}
-//           mb={[10, 10, 20]}
-//           textAlign="center"
-//           textTransform="uppercase"
-//           maxW={["full", "80%", "78%"]}
-//           fontSize="clamp(1.8rem, 5vw, 4rem)"
-//           data-aos="fade-up"
-//           // bgGradient="linear(to-l, purple.500, magenta.400)"
-//           // bgClip="text"
-//         >
-//           Free templates
-//           <br /> that offer a bolder look
-//         </Heading>
-
-
-//         <ChakraCarousel gap={gap} navigation="buttons">
-//           {items.map((item, idx) => (
-//             <Box
-//               pos="relative"
-//               width="full"
-//               data-name={item.title + idx}
-//               key={item.title + idx}
-//               zIndex={1}
-//               data-aos="fade-up"
-//               data-aos-delay={100 * idx}
-//             >
-//               <VStack align="stretch" width="full">
-//                 <Box pos="relative" zIndex={-1}>
-//                   <AspectRatio ratio={3 / 4}>
-//                     <Image
-//                       layout="fill"
-//                       objectFit="cover"
-//                       src={item.image}
-//                       alt={item.title}
-//                     />
-//                   </AspectRatio>
-//                 </Box>
-//                 <Stack
-//                   justify="space-between"
-//                   width="full"
-//                   direction={["column", "row", "row", "row"]}
-//                   align={["stretch", "center", "center"]}
-//                 >
-//                   <VStack alignItems={["center", "start", "start"]}>
-//                     <Text>{item.title}</Text>
-//                     <Text fontFamily="mono">{PriceFormat(item.price)}</Text>
-//                   </VStack>
-//                   <Button
-//                     // leftIcon={<BsCartPlus />}
-//                     colorScheme="gray"
-//                     size="md"
-//                   >
-//                     <Text display={["none", "none", "unset"]}>Add</Text>
-//                     <Text display={["unset", "unset", "none"]}>
-//                       Add to cart
-//                     </Text>
-//                   </Button>
-//                 </Stack>
-//               </VStack>
-//             </Box>
-//           ))}
-//         </ChakraCarousel>
-//         </SimpleGrid>
-//       </Container>
-//     </Box>
-//   );
-// };
 
 const AsFeaturedInBlock: React.FC<BlockProps> = () => {
   const fillColor = useColorModeValue("gray.600", "whiteAlpha.600");
@@ -1059,61 +753,6 @@ const ContentBlock: React.FC<IContentBlockProps> = ({
   );
 };
 
-// const BlogBlock: React.FC<BlockProps> = () => {
-//   const items = [
-//     {
-//       image: "https://source.unsplash.com/7fGYiTnnXM0",
-//       subtitle: "Makeup",
-//       title: "Vivamus sagittis lacus",
-//       body: "Nihilne te nocturnum praesidium palati, nihil urbis vigiliae nihil hic munitissimus habendi senatus locus, nihil horum.",
-//     },
-//     {
-//       image: "https://source.unsplash.com/lE85uDPmIL4",
-//       subtitle: "Skincare",
-//       title: "Paullum deliquit ponderibus",
-//       body: "Paullum deliquit, ponderibus modulisque suis ratio utitur nec dubitamus multa iter quae et nos invenerat cum ceteris.",
-//     },
-//   ];
-
-//   return (
-//     <Box width="full">
-//       <Container maxW={930}>
-//         <VStack mb={10}>
-//           <Text>Makeup & Cosmetics</Text>
-//           <Heading>A makeup, skincare and lifestyles</Heading>
-//         </VStack>
-//         <SimpleGrid columns={[1, 1, 2]} spacing={[10, 10, 20]}>
-//           {items.map((item, idx) => (
-//             <VStack key={item.image + idx} textAlign="center" spacing={4}>
-//               <AspectRatio
-//                 w="full"
-//                 flex="1"
-//                 zIndex={1}
-//                 ratio={3 / 4}
-//                 pos="relative"
-//                 maxH={550}
-//               >
-//                 <Image
-//                   src={item.image}
-//                   alt={item.title}
-//                   layout="fill"
-//                   objectFit="cover"
-//                 />
-//               </AspectRatio>
-//               <Flex direction="column" justify="center" align="center">
-//                 <Text>{item.subtitle}</Text>
-//                 <Heading as="h3" fontSize="2xl">
-//                   {item.title}
-//                 </Heading>
-//               </Flex>
-//               <Text>{item.body}</Text>
-//             </VStack>
-//           ))}
-//         </SimpleGrid>
-//       </Container>
-//     </Box>
-//   );
-// };
 
 const BgSvg: React.FC<BlockProps> = ({ color, ...rest }) => {
   const activeColor = color
