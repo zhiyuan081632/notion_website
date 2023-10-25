@@ -120,7 +120,7 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
 
               {/* <Divider borderColor="gray.600" /> */}
 
-              <VStack align="stretch" spacing={[4]}>
+              {/* <VStack align="stretch" spacing={[4]}>
                 <Stack
                   w="full"
                   spacing={4}
@@ -137,7 +137,7 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
                 <Text color={color} fontSize="sm">
                 If you have any opinions or feedback, you can email us.
                 </Text>
-              </VStack>
+              </VStack> */}
 
             </Stack>
             <SimpleGrid w="full" flex="2" columns={[1, 2, 2, 3]} spacing={[10]}>

@@ -132,7 +132,7 @@ const ContactForm: React.FC<ChakraProps & ThemingProps> = ({
                 {...register("email")}
               />
               <FormErrorMessage>{errors?.email?.message}</FormErrorMessage>
-            </FormControl>
+            </FormControl> 
           </Stack>
 
           <Stack

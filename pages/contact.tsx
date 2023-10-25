@@ -41,7 +41,7 @@ const ContactPage: React.FC = () => {
               <Text variant="subtitle" data-aos="fade-up">
                 Contact
               </Text>
-              <Heading
+              {/* <Heading
                 as="h1"
                 lineHeight={[1.5, 1, 1]}
                 fontSize={["2em", "3em", "4em"]}
@@ -49,15 +49,14 @@ const ContactPage: React.FC = () => {
                 data-aos-delay="50"
               >
                 We would love to hear your comments and suggestions
-              </Heading>
+              </Heading> */}
               <Text
                 data-aos="fade-up"
                 data-aos-delay="100"
                 maxW={680}
                 fontSize="2xl"
               >
-                A corporate and premium e-commerce template designed to assist
-                you in building websites more quickly.
+                You can reach me at b (@) zhiyuan081632
               </Text>
             </VStack>
           </Container>
@@ -70,7 +69,7 @@ const ContactPage: React.FC = () => {
             p={[4, 8, 10, 20]}
             bg={useColorModeValue("white", "gray.700")}
           >
-            <ContactForm />
+            {/* <ContactForm /> */}
           </Box>
         </Container>
 
@@ -112,7 +111,7 @@ const ContactPage: React.FC = () => {
             alignItems={["stretch", "stretch", "center"]}
             direction={["column", "column", "row"]}
           >
-            <Flex
+            {/* <Flex
               justify={["center", "center", "start"]}
               w="full"
               flex={[1, 1, 1, 2]}
@@ -178,11 +177,11 @@ const ContactPage: React.FC = () => {
                   <Link>Get directions</Link>
                 </VStack>
               </Box>
-            </Flex>
+            </Flex> */}
           </Stack>
         </Container>
 
-        <Box pos="relative">
+        {/* <Box pos="relative">
           <Container pos="relative" zIndex={1} maxW="container.xl">
             <CTA
               data-aos="fade-up"
@@ -198,7 +197,7 @@ const ContactPage: React.FC = () => {
             h={52}
             bottom={0}
           />
-        </Box>
+        </Box> */}
       </chakra.main>
     </>
   );

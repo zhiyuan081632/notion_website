@@ -113,12 +113,12 @@ const FAQPage: React.FC = (): JSX.Element => {
             />
           </Box>
         </Container>
-        <Container py={10} maxW="container.xl">
+        {/* <Container py={10} maxW="container.xl">
           <CTA
             title="Start your & 14-day free trial"
             subtitle="Support and Customization Services"
           />
-        </Container>
+        </Container> */}
       </chakra.main>
     </>
   );

@@ -397,10 +397,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
               </Text>
               
 
-              <InputGroup>
-                {/* <InputLeftElement pointerEvents="none">
-                  <SearchIcon color="gray.300" />
-                </InputLeftElement> */}
+              {/* <InputGroup>
                 <Input
                   type="text"
                   placeholder="Search Notion Templates"
@@ -416,7 +413,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                 </Button>
               </InputRightElement>
 
-              </InputGroup>
+              </InputGroup> */}
 
               {/* <Button
                 data-aos="fade-up"

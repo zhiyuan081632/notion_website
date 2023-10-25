@@ -64,12 +64,12 @@ const AboutPage: React.FC = () => {
         <VStack align="stretch" mb={32} spacing={32}>
           <Header bodyColor={gray} />
           <Feature bodyColor={gray} />
-          <Stats bodyColor={gray} />
+          {/* <Stats bodyColor={gray} /> */}
           <Mission bodyColor={gray} />
           <VStack>
             <Divider maxW="30rem" />
           </VStack>
-          <ContentBox
+          {/* <ContentBox
             bodyColor={gray}
             subtitle="Our Community"
             title="We have a creative community"
@@ -83,10 +83,10 @@ const AboutPage: React.FC = () => {
             title="We grow with open collaboration"
             body="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum ceteris in veneratione tui montes, nascetur mus. Cras mattis iudicium purus sit amet fermentum. At nos hinc posthac, sitientis piros Afros. Magna pars studiorum, prodita quaerimus."
             image="/images/team-6.jpg"
-          />
-          <Team bodyColor={gray} />
-          <LearnMoreAboutUs bg={lightGray} bodyColor={gray} />
-          <CTA bodyColor={gray} />
+          /> */}
+          {/* <Team bodyColor={gray} /> */}
+          {/* <LearnMoreAboutUs bg={lightGray} bodyColor={gray} /> */}
+          {/* <CTA bodyColor={gray} /> */}
         </VStack>
       </chakra.main>
     </>
@@ -118,7 +118,7 @@ const Header: React.FC<I_BlockProps> = ({ bodyColor }) => {
               About us
             </Text>
             <Heading size="2xl" data-aos="fade-up" data-aos-delay={100}>
-              We develop digital products for startups & enterprises
+              We are all contributors and beneficiaries of the Notion community
             </Heading>
             <Text
               color={bodyColor}
@@ -126,8 +126,9 @@ const Header: React.FC<I_BlockProps> = ({ bodyColor }) => {
               data-aos="fade-up"
               data-aos-delay={150}
             >
-              We’ve worked on over 50+ projects with clients in 12 industries,
-              from early-stage startups to Fortune 500 companies.
+              Notion Pages was built by Notion fans, this is not an official site. 
+              However, it serves as a valuable resource for the Notion community, offering tips, templates, and insights into how to make the most of the Notion app. 
+              The creators of Notion Pages are passionate about the platform and aim to enhance the user experience by providing a platform for sharing knowledge and ideas related to Notion.
             </Text>
           </VStack>
 
@@ -200,7 +201,7 @@ const Feature: React.FC<I_BlockProps> = ({ bodyColor }) => {
           columns={[1, 1, 2]}
           spacing={[10, 10, 10, 20]}
         >
-          <Box>
+          {/* <Box>
             <AspectRatio
               // bg="lime.100"
               ratio={1}
@@ -233,7 +234,7 @@ const Feature: React.FC<I_BlockProps> = ({ bodyColor }) => {
                 tempus vehicula.
               </Text>
             </VStack>
-          </Box>
+          </Box> */}
         </SimpleGrid>
       </Container>
     </Box>
@@ -309,12 +310,10 @@ const Mission: React.FC<I_BlockProps> = ({ bodyColor }) => {
         <Stack spacing={[10, 10, 20]}>
           <VStack textAlign="center">
             <Text variant="subtitle">Our Mission</Text>
-            <Heading>Making commerce easier for everyone</Heading>
+            <Heading>Create a better Notion tools community</Heading>
             <Text color={bodyColor} fontSize={["xl", "xl", "2xl"]}>
-              Inmensae subtilitatis, obscuris et malesuada fames. Excepteur sint
-              obcaecat cupiditat non proident culpa. Contra legem facit qui id
-              facit quod lex prohibet petierunt uti sibi concilium totius
-              Galliae in diem certam indicere.
+              Our mission is dedicated to the creation and nurturing of a thriving Notion tools community, where users can collaborate, share ideas, and develop innovative tools to enhance their Notion experience. 
+              We aspire to continually improve and enrich this community, making it a valuable resource for Notion enthusiasts around the world.
             </Text>
           </VStack>
         </Stack>

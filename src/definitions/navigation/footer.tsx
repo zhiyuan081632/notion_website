@@ -94,24 +94,24 @@ const CommponPageItems = [
   },
 ];
 
-const CompanyItems = [
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Careers",
-    href: "#",
-  },
-  {
-    title: "Terms of Service",
-    href: "/terms",
-  },
-  // {
-  //   title: "Return policy",
-  //   href: "#",
-  // },
-];
+// const CompanyItems = [
+//   {
+//     title: "About",
+//     href: "/about",
+//   },
+//   {
+//     title: "Careers",
+//     href: "#",
+//   },
+//   {
+//     title: "Terms of Service",
+//     href: "/terms",
+//   },
+//   {
+//     title: "Return policy",
+//     href: "#",
+//   },
+// ];
 
 const ResourcesItems = [
   {
@@ -132,11 +132,11 @@ const ResourcesItems = [
 ];
 
 const NavigationItems: T_NavItems[] = [
-  {
-    title: "Company",
-    href: "",
-    subitems: CompanyItems,
-  },
+  // {
+  //   title: "Company",
+  //   href: "",
+  //   subitems: CompanyItems,
+  // },
   // {
   //   title: "Home Pages",
   //   href: "#",
@@ -157,12 +157,12 @@ const NavigationItems: T_NavItems[] = [
   //   href: "#",
   //   subitems: CommponPageItems,
   // },
-  {
-    title: "Get Help",
-    href: "",
-    subitems: ResourcesItems,
-    children: <CountrySelect />,
-  },
+  // {
+  //   title: "Get Help",
+  //   href: "",
+  //   subitems: ResourcesItems,
+  //   children: <CountrySelect />,
+  // },
 ];
 
 
