@@ -49,7 +49,6 @@ import Image from "@components/image";
 import CTA from "@blocks/cta";
 
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SchoolTemplatesPage from './templates-school'; // 导入新页面组件
 
 
@@ -1249,68 +1248,68 @@ const BrushSvg: React.FC<BlockProps> = ({ color, ...rest }) => {
 };
 
 
-const RelatedPostsBlock: React.FC<IRelatedPostsProps> = ({
-  items = [],
-  bg,
-  color,
-  ...rest
-}) => {
-  const defaultBg = bg ? bg : useColorModeValue("gray.200", "gray.900");
-  const defaultColor = color
-    ? color
-    : useColorModeValue("gray.700", "whiteAlpha.800");
-  return (
-    <Box py={[10, 10, 20]} width="full" bg={defaultBg} {...rest}>
-      <Container maxW="container.xl">
-        <Stack direction={["column", "column", "row"]} spacing={[10, 10, 14]}>
-          {items.map((item, idx) => (
-            <Flex
-              key={item.title + idx}
-              flex="1"
-              data-aos="fade-up"
-              data-aos-delay={100 * idx}
-            >
-              <Flex width="full" direction="column">
-                <Box width="full" pos="relative">
-                  <AspectRatio mb={8} ratio={4 / 3}>
-                    <Image
-                      rounded="xl"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="center"
-                      alt={item.title}
-                      src={item.image}
-                    />
-                  </AspectRatio>
-                </Box>
+// const RelatedPostsBlock: React.FC<IRelatedPostsProps> = ({
+//   items = [],
+//   bg,
+//   color,
+//   ...rest
+// }) => {
+//   const defaultBg = bg ? bg : useColorModeValue("gray.200", "gray.900");
+//   const defaultColor = color
+//     ? color
+//     : useColorModeValue("gray.700", "whiteAlpha.800");
+//   return (
+//     <Box py={[10, 10, 20]} width="full" bg={defaultBg} {...rest}>
+//       <Container maxW="container.xl">
+//         <Stack direction={["column", "column", "row"]} spacing={[10, 10, 14]}>
+//           {items.map((item, idx) => (
+//             <Flex
+//               key={item.title + idx}
+//               flex="1"
+//               data-aos="fade-up"
+//               data-aos-delay={100 * idx}
+//             >
+//               <Flex width="full" direction="column">
+//                 <Box width="full" pos="relative">
+//                   <AspectRatio mb={8} ratio={4 / 3}>
+//                     <Image
+//                       rounded="xl"
+//                       layout="fill"
+//                       objectFit="cover"
+//                       objectPosition="center"
+//                       alt={item.title}
+//                       src={item.image}
+//                     />
+//                   </AspectRatio>
+//                 </Box>
 
-                <VStack color={defaultColor} mb={6} align="stretch" spacing={2}>
-                  <Text noOfLines={3} lineHeight={1} variant="subtitle">
-                    {item.subtitle}
-                  </Text>
-                  <Wrap
-                    shouldWrapChildren
-                    fontFamily="mono"
-                    fontSize="sm"
-                    align="center"
-                  >
-                    {/* <Text>{timeAgo(item.date)}</Text> */}
-                    {/* <Circle size={1} bg="gray.500" />
-                    <Text>{item.meta}</Text> */}
-                  </Wrap>
-                  <Heading fontFamily="body" as="h3" size="lg" lineHeight={1.2}>
-                    <NextLink href={item.href} passHref>
-                      <Link _hover={{ color: "brand.400" }}>{item.title}</Link>
-                    </NextLink>
-                  </Heading>
-                </VStack>
-              </Flex>
-            </Flex>
-          ))}
-        </Stack>
-      </Container>
-    </Box>
-  );
-};
+//                 <VStack color={defaultColor} mb={6} align="stretch" spacing={2}>
+//                   <Text noOfLines={3} lineHeight={1} variant="subtitle">
+//                     {item.subtitle}
+//                   </Text>
+//                   <Wrap
+//                     shouldWrapChildren
+//                     fontFamily="mono"
+//                     fontSize="sm"
+//                     align="center"
+//                   >
+//                     {/* <Text>{timeAgo(item.date)}</Text> */}
+//                     {/* <Circle size={1} bg="gray.500" />
+//                     <Text>{item.meta}</Text> */}
+//                   </Wrap>
+//                   <Heading fontFamily="body" as="h3" size="lg" lineHeight={1.2}>
+//                     <NextLink href={item.href} passHref>
+//                       <Link _hover={{ color: "brand.400" }}>{item.title}</Link>
+//                     </NextLink>
+//                   </Heading>
+//                 </VStack>
+//               </Flex>
+//             </Flex>
+//           ))}
+//         </Stack>
+//       </Container>
+//     </Box>
+//   );
+// };
 
 export default Home3Page;

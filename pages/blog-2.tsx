@@ -128,7 +128,7 @@ const Blog2Page: React.FC = () => {
             title="How to easily grow your product management knowledge every day"
             body="Did you ever wonder how many things product managers have to know? It’s a lot. It’s a never-ending story of continuous learning and expanding basic knowledge from various fields."
           />
-          <RelatedPostsBlock
+          {/* <RelatedPostsBlock
             items={[
               {
                 href: "#",
@@ -159,7 +159,7 @@ const Blog2Page: React.FC = () => {
                 date: "Aug 10, 2022 18:25",
               },
             ]}
-          />
+          /> */}
 
           <CallToActionBlock
             title="Build any type of website with built-in components"
