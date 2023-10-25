@@ -45,37 +45,37 @@ const PricingPageItems = [
     title: "Pricing 3",
   },
 ];
-const BlogPageItems = [
-  {
-    href: "/blog-1",
-    title: "Blog 1",
-  },
-  {
-    href: "/blog-2",
-    title: "Blog 2",
-  },
-  {
-    href: "/blog-3",
-    title: "Blog 3",
-  },
-  {
-    href: "/blog-post",
-    title: "Blog Post",
-  },
-];
+// const BlogPageItems = [
+//   {
+//     href: "/blog-1",
+//     title: "Blog 1",
+//   },
+//   {
+//     href: "/blog-2",
+//     title: "Blog 2",
+//   },
+//   {
+//     href: "/blog-3",
+//     title: "Blog 3",
+//   },
+//   {
+//     href: "/blog-post",
+//     title: "Blog Post",
+//   },
+// ];
 const CommponPageItems = [
   {
     href: "/about",
     title: "About",
   },
-  {
-    href: "/checkout",
-    title: "Checkout",
-  },
-  {
-    href: "/shopping-cart",
-    title: "Shopping Cart",
-  },
+  // {
+  //   href: "/checkout",
+  //   title: "Checkout",
+  // },
+  // {
+  //   href: "/shopping-cart",
+  //   title: "Shopping Cart",
+  // },
   {
     href: "/product-overview",
     title: "Product Overview",

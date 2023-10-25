@@ -83,7 +83,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
           />
 
           <HStack spacing={2}>
-            <Button
+            {/* <Button
               onClick={() => dispatch({ type: CartActions.CART_DRAWER_TOGGLE })}
               variant="ghost"
               fontWeight={500}
@@ -110,7 +110,7 @@ const Header1: React.FC<ChakraProps & ThemingProps> = (props) => {
               >
                 Sign In
               </Link>
-            </NextLink>
+            </NextLink> */}
 
             {/* Mobile Menu Button */}
             <Box display={breakpointReverse}>

@@ -92,19 +92,19 @@ const Home: React.FC = () => {
             title=""
             items={[
               {
-                image: "/images/notion/UltimateStudyPlanner.png",
-                title: "Ultimate Study Planner",
-                href: "https://vagabond-class-8ef.notion.site/Japanese-template-c91b86e1472447adbcfab68e11bfb3f6",
+                image: "/images/notion/ProjectManagement.png",
+                title: "Project Management",
+                href: "https://www.notion.so/Project-management-b0da96e986714d9f98319675ed48114c",
               },
               {
-                image: "/images/notion/JapaneseLanguageLearning.png",
-                title: "Japanese language learning",
-                href: "https://www.notion.so/Teacher-home-8149ad2c3e374a4e99d82f46bcce4e34",
+                image: "/images/notion/DevelopLaunchanApp.png",
+                title: "Develop & launch an app",
+                href: "https://www.notion.so/Develop-Launch-An-App-e7d60b79ab414385b7d06b1fc299a6cb",
               },
               {
-                image: "/images/notion/TeacherHome.png",
-                title: "Teacher Home",
-                href: "/pricing-3",
+                image: "/images/notion/APITemplate.png",
+                title: "API Template",
+                href: "https://diemas.notion.site/diemas/API-Template-89b5fd4ec70a433088c83bbb9ceab4c6",
               },
             ]}
           />
@@ -115,19 +115,19 @@ const Home: React.FC = () => {
             // columns={[1, 1, 3, 4]}
             items={[
               {
-                image: "/images/notion/AcademicOverview.png",
-                title: "Academic Overview",
+                image: "/images/notion/NewHireOnboarding.png",
+                title: "New hire onboarding",
                 href: "https://ash-earwig-2b1.notion.site/54b1456e0c2144ec8ce6696595e540d4",
               },
               {
-                image: "/images/notion/ResearchPaper.png",
-                title: "Research Paper",
-                href: "https://donwells.notion.site/Research-Paper-Template-102f5965d90e4456b7106bca87bc21e3",
+                image: "/images/notion/ReportaBug.png",
+                title: "Report a Bug",
+                href: "https://notion.notion.site/Report-a-bug-2b8da606f4a74633ac0d1806d09c43bf",
               },
               {
-                image: "/images/notion/UPSCExamPrep.png",
-                title: "UPSC Exam Prep",
-                href: "https://fair-goldenrod-dec.notion.site/UPSC-Preparation-2023-3d9625f48dc3429aad0c2601279eac21",
+                image: "/images/notion/ToolsStack.png",
+                title: "Tools Stack",
+                href: "https://www.notion.so/Tools-Stack-6c90495191c64ece9355133f82e56eb6",
               },
             ]}
           />

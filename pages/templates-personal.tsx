@@ -66,23 +66,23 @@ const Home: React.FC = () => {
             title="Personal Templates"
             items={[
               {
-                image: "/images/notion/CourseSchedule.png",
-                title: "Course Schedule",
-                href: "https://www.notion.so/templates/course-schedule",
+                image: "/images/notion/YearlyGoalTracker.png",
+                title: "Yearly Goal Tracker",
+                href: "https://notion.notion.site/2023-Yearly-Goal-Tracker-f00192d562f64fb79d49298e0afa306e",
                 
                 
               },
               {
-                image: "/images/notion/CollegeLifePlanner.png",
-                title: "College Life Planner",
-                href: "https://tricky-whale-c0c.notion.site/Academic-Planner-ae960839f04a41faade9b60878dcd10d",
+                image: "/images/notion/HabitTracker.png",
+                title: "Habit tracker",
+                href: "https://notion-templates.notion.site/Habit-Tracker-095566615d314e2ba91640772339c29d",
                 
                 
               },
               {
-                image: "/images/notion/LessonPlans.png",
-                title: "Lesson Plans",
-                href: "https://www.notion.so/templates/lesson-plans",
+                image: "/images/notion/ReadingList.png",
+                title: "Reading list",
+                href: "https://www.notion.so/Reading-List-14918425560f4ec5b303314a29eb53e1",
               },
             ]}
           />
@@ -91,19 +91,19 @@ const Home: React.FC = () => {
             title=""
             items={[
               {
-                image: "/images/notion/UltimateStudyPlanner.png",
-                title: "Ultimate Study Planner",
-                href: "https://vagabond-class-8ef.notion.site/Japanese-template-c91b86e1472447adbcfab68e11bfb3f6",
+                image: "/images/notion/TravelPlanner.png",
+                title: "Travel Planner",
+                href: "https://notion-templates.notion.site/Travel-Planner-4d3d6a95ba154d1aab3fc62584729c22",
               },
               {
-                image: "/images/notion/JapaneseLanguageLearning.png",
-                title: "Japanese language learning",
-                href: "https://www.notion.so/Teacher-home-8149ad2c3e374a4e99d82f46bcce4e34",
+                image: "/images/notion/Flashcards.png",
+                title: "Flashcards",
+                href: "https://easlo.notion.site/Flashcards-0908a79f056446be84cb85eef09e5fcd",
               },
               {
-                image: "/images/notion/TeacherHome.png",
-                title: "Teacher Home",
-                href: "/pricing-3",
+                image: "/images/notion/BudgetTracker.png",
+                title: "Budget Tracker",
+                href: "https://creativity-cloud.notion.site/Budget-Tracker-dabd502c41a44e1ba57075705bb9417e",
               },
             ]}
           />
@@ -114,19 +114,19 @@ const Home: React.FC = () => {
             // columns={[1, 1, 3, 4]}
             items={[
               {
-                image: "/images/notion/AcademicOverview.png",
-                title: "Academic Overview",
+                image: "/images/notion/MinimalPomodoroTracker.png",
+                title: "Minimal pomodoro tracker",
                 href: "https://ash-earwig-2b1.notion.site/54b1456e0c2144ec8ce6696595e540d4",
               },
               {
-                image: "/images/notion/ResearchPaper.png",
-                title: "Research Paper",
-                href: "https://donwells.notion.site/Research-Paper-Template-102f5965d90e4456b7106bca87bc21e3",
+                image: "/images/notion/SimpleToDoList.png",
+                title: "Simple To Do List",
+                href: "https://tar-name-4a2.notion.site/Simple-To-Do-List-Access-Page-7439126fdf984203abc428d74d636e5d",
               },
               {
-                image: "/images/notion/UPSCExamPrep.png",
-                title: "UPSC Exam Prep",
-                href: "https://fair-goldenrod-dec.notion.site/UPSC-Preparation-2023-3d9625f48dc3429aad0c2601279eac21",
+                image: "/images/notion/RecipesShoppingListandMealPlan.png",
+                title: "Recipes, shopping list and meal plan",
+                href: "https://overjoyed-basilisk-506.notion.site/Recipes-shopping-list-and-meal-plan-4b13b78f43d446d5bb9785de284f9ee4",
               },
             ]}
           />

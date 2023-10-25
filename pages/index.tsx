@@ -117,7 +117,7 @@ const Home3Page: React.FC = () => {
             zIndex={1}
           >
             <Image
-              src={"/images/home-2/product-0-silver.jpeg"}
+              src={"/images/notion/SchoolTemplates.jpeg"}
               alt="Senco product image"
               layout="fill"
               objectFit="cover"
@@ -199,7 +199,7 @@ const Home3Page: React.FC = () => {
             borderStartRadius={["none", "none", "2xl", "2xl"]}
           >
             <Image
-              src={"/images/home-2/product-0-silver-1.jpeg"}
+              src={"/images/notion/WorkTemplates.jpeg"}
               alt="Senco product image"
               layout="fill"
               objectFit="contain"
@@ -225,7 +225,7 @@ const Home3Page: React.FC = () => {
             zIndex={1}
           >
             <Image
-              src={"/images/home-2/product-0-silver.jpeg"}
+              src={"/images/notion/ProjectsTemplates.jpeg"}
               alt="Senco product image"
               layout="fill"
               objectFit="cover"
@@ -303,7 +303,7 @@ const Home3Page: React.FC = () => {
             borderStartRadius={["none", "none", "2xl", "2xl"]}
           >
             <Image
-              src={"/images/home-2/product-0-silver-1.jpeg"}
+              src={"/images/notion/PersonalTemplates.jpeg"}
               alt="Senco product image"
               layout="fill"
               objectFit="contain"
@@ -391,7 +391,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                 textAlign={["center", "center", "start"]}
                 data-aos="fade-up"
                 data-aos-delay={350}
-                maxW={450}
+                maxW={2000}
               >
                 At our company, we make work easier. Explore our Notion templates for all your tasks and projects, and boost your productivity.
               </Text>

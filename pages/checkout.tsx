@@ -381,12 +381,12 @@ const PageFooter = () => {
       justify="space-between"
       w="full"
     >
-      <Button leftIcon={<ChevronLeftIcon />} variant="ghost">
+      {/* <Button leftIcon={<ChevronLeftIcon />} variant="ghost">
         Return to cart
       </Button>
       <Button rightIcon={<ChevronRightIcon />} variant="ghost">
         Continue shopping
-      </Button>
+      </Button> */}
     </Stack>
   );
 };

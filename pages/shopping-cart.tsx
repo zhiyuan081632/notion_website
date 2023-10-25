@@ -49,10 +49,10 @@ const ShoppingCartPage: React.FC = () => {
   const spacingL = [10, 10, 20, 32];
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title="Senco React E-Commerce Shopping Cart"
         description="Senco React E-Commerce Website Template Shopping Cart example page"
-      />
+      /> */}
       <chakra.main pt={[28]}>
         <Container maxW="container.xl" mb={spacingL}>
           <Stack
@@ -68,7 +68,7 @@ const ShoppingCartPage: React.FC = () => {
               spacing={5}
               divider={<StackDivider />}
             >
-              <Box>
+              {/* <Box>
                 <Stack
                   align="center"
                   w="full"
@@ -83,7 +83,7 @@ const ShoppingCartPage: React.FC = () => {
                     ({state.cart.length} items)
                   </Text>
                 </Stack>
-              </Box>
+              </Box> */}
               <CartItems />
               <Button size="lg" variant="ghost" leftIcon={<ArrowBackIcon />}>
                 Continue shopping

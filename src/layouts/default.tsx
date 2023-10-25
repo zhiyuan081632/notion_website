@@ -49,7 +49,7 @@ const DefaultLayout: React.FC<ILayout.IProps> = ({
         )}
         {children}
         {footer ? footer : <FooterDefault />}
-        <CartDrawer />
+        {/* <CartDrawer /> */}
       </CartProvider>
     </CheckoutProvider>
   );
