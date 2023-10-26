@@ -59,7 +59,7 @@ const Home3Page: React.FC = () => {
   return (
     <>
       <NextSeo
-        title="Notion React E-Commerce"
+        title="NotionTemplate.AI"
         description="Notion React E-Commerce Website Template"
       />
       <chakra.main>
@@ -136,9 +136,9 @@ const Home3Page: React.FC = () => {
                 School Templates
               </Text>
               <Text>
-                Maximize your academic potential with these student templates. 
-                Organize class notes, homework assignments, and projects with ease. 
-                Keep track of your grades and goals and improve your academic performance with Notion tools.
+                Boost your academic capabilities using these student templates. 
+                Efficiently arrange class notes, homework tasks, and projects. 
+                Monitor your grades and objectives, and enhance your academic achievements with the help of Notion tools.
               </Text>
 
               <Link
@@ -148,8 +148,6 @@ const Home3Page: React.FC = () => {
                   >
                     Read More
               </Link>
-
-                
 
             </VStack>
           </Flex>
@@ -172,8 +170,8 @@ const Home3Page: React.FC = () => {
                 Work Templates
               </Text>
               <Text>
-                Ready to elevate your work with best practices from leading companies and experts? 
-                These easy-to-use templates can help you simplify how you and your team get stuff done.
+                Are you prepared to enhance your work by adopting best practices from top companies and experts? 
+                These user-friendly templates can assist you in streamlining how you and your team accomplish tasks.
               </Text>
               <Link
                     href="/templates-work"
@@ -244,8 +242,8 @@ const Home3Page: React.FC = () => {
                 Projects Templates
               </Text>
               <Text>
-                Bring your projects to life with Notion's project management templates. 
-                Plan, organize, and collaborate with your team all in one centralized location.
+                Energize your projects using Notion's project management templates. 
+                Strategize, arrange, and collaborate with your team, all from a single centralized hub.
               </Text>
               <Link
                     href="/templates-projects"
@@ -275,9 +273,9 @@ const Home3Page: React.FC = () => {
               Personal templates
               </Text>
               <Text>
-                Need a better way to organize your life? 
-                From daily schedules and to-do lists to home info and habit trackers, 
-                Notion's personal templates have you covered for whatever life throws at you.
+                Looking for a more effective method to streamline your life? 
+                Whether it's daily schedules and task lists or home-related information and habit tracking, 
+                Notion's personal templates have got you covered for handling whatever life throws your way.
               </Text>
               <Link
                     href="/templates-personal"
@@ -392,7 +390,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                 data-aos-delay={350}
                 maxW={2000}
               >
-                At our company, we make work easier. Explore our Notion templates for all your tasks and projects, and boost your productivity.
+                Explore our Notion templates for all your tasks and projects, and boost your productivity.
               </Text>
               
 

@@ -103,40 +103,7 @@ export const main = [
     //   },
     // ],
   },
-  // {
-  //   title: "Blog",
-  //   href: "",
-  //   subColumns: [4],
-  //   subitems: [
-  //     {
-  //       title: "Blog 1",
-  //       href: "/blog-1",
-  //       image: "/images/page-blog-1.png",
-  //       description:
-  //         "Expand the audience in line with brand goals with blog posts.",
-  //     },
-  //     {
-  //       title: "Blog 2",
-  //       href: "/blog-2",
-  //       image: "/images/page-blog-2.png",
-  //       description:
-  //         "Blog pages to keep your website up to date and drive more traffic.",
-  //     },
-  //     {
-  //       title: "Blog 3",
-  //       href: "/blog-3",
-  //       image: "/images/page-blog-3.png",
-  //       description: "To keep ahead of your rivals, provide fresh content.",
-  //     },
-  //     {
-  //       title: "Blog Post",
-  //       href: "/blog-post",
-  //       image: "/images/page-blog-post.png",
-  //       description:
-  //         "Senco provides several variants for popular sites for customisation.",
-  //     },
-  //   ],
-  // },
+
   {
     title: "Pages",
     href: "",
@@ -147,30 +114,64 @@ export const main = [
         href: "/templates-school",
         image: "/images/notion/SchoolTemplates.jpeg",
         description:
-          "Maximize your academic potential with these student templates. Organize class notes, homework assignments, and projects with ease. Keep track of your grades and goals and improve your academic performance with Notion tools.",
+          "Boost your academic capabilities using these student templates. Efficiently arrange class notes, homework tasks, and projects. Monitor your grades and objectives, and enhance your academic achievements with the help of Notion tools.",
       },
       {
         title: "Work Templats",
         href: "/templates-work",
         image: "/images/notion/WorkTemplates.jpeg",
         description:
-          "Ready to elevate your work with best practices from leading companies and experts? These easy-to-use templates can help you simplify how you and your team get stuff done.",
+          "Are you prepared to enhance your work by adopting best practices from top companies and experts? These user-friendly templates can assist you in streamlining how you and your team accomplish tasks.",
       },
       {
         title: "Projects Templats",
         href: "/templates-projects",
         image: "/images/notion/ProjectsTemplates.jpeg",
         description:
-          "Bring your projects to life with Notion's project management templates. Plan, organize, and collaborate with your team all in one centralized location.",
+          "Energize your projects using Notion's project management templates. Strategize, arrange, and collaborate with your team, all from a single centralized hub.",
       },
       {
         title: "Personal Templats",
         href: "/templates-personal",
         image: "/images/notion/PersonalTemplates.jpeg",
         description:
-          "Need a better way to organize your life? From daily schedules and to-do lists to home info and habit trackers, Notion's personal templates have you covered for whatever life throws at you.",
+          "Looking for a more effective method to streamline your life? Whether it's daily schedules and task lists or home-related information and habit tracking, Notion's personal templates have got you covered for handling whatever life throws your way.",
       },
     ],
+  },
+  {
+    title: "Blog",
+    href: "/blog-1",
+    // subColumns: [4],
+    // subitems: [
+    //   {
+    //     title: "Blog 1",
+    //     href: "/blog-1",
+    //     image: "/images/page-blog-1.png",
+    //     description:
+    //       "Expand the audience in line with brand goals with blog posts.",
+    //   },
+    //   {
+    //     title: "Blog 2",
+    //     href: "/blog-2",
+    //     image: "/images/page-blog-2.png",
+    //     description:
+    //       "Blog pages to keep your website up to date and drive more traffic.",
+    //   },
+    //   {
+    //     title: "Blog 3",
+    //     href: "/blog-3",
+    //     image: "/images/page-blog-3.png",
+    //     description: "To keep ahead of your rivals, provide fresh content.",
+    //   },
+    //   {
+    //     title: "Blog Post",
+    //     href: "/blog-post",
+    //     image: "/images/page-blog-post.png",
+    //     description:
+    //       "Senco provides several variants for popular sites for customisation.",
+    //   },
+    // ],
   },
   // {
   //   title: "Pricing",

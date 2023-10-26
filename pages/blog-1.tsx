@@ -13,6 +13,7 @@ import {
   type ChakraProps,
   Circle,
   Container,
+  Divider,
   Flex,
   Heading,
   HStack,
@@ -53,12 +54,12 @@ const Blog1Page: React.FC = () => {
       <chakra.main>
         <VStack spacing={[10, 20, 32]}>
           <HeroBlock pt={28} pb={28} />
-          <OverlayBlogPostsBlock />
-          <NewsletterBlock />
+          {/* <OverlayBlogPostsBlock />
+          <NewsletterBlock /> */}
           <FilteredBlogsBlock />
-          <UpcomingEvents />
+          {/* <UpcomingEvents /> */}
 
-          <Box width="full" pos="relative">
+          {/* <Box width="full" pos="relative">
             <Container pos="relative" zIndex={1} maxW="container.xl">
               <CTABlock
                 title="Turn Your Social Into A Power Source"
@@ -75,7 +76,8 @@ const Blog1Page: React.FC = () => {
               h={52}
               bottom={0}
             />
-          </Box>
+          </Box> */}
+        <Divider borderColor="gray.600" />
         </VStack>
       </chakra.main>
     </>
@@ -93,94 +95,120 @@ const HeroBlock: React.FC<BlockProps> = (props) => {
     <Box width="full" bg={bg} {...props}>
       <Container maxW="container.xl">
         <VStack textAlign="center">
-          <Heading fontSize={heading} data-aos="fade-up" data-aos-delay={0}>
-            New insights from
-            <chakra.br display={["none", "block", "block"]} /> experts every
-            week.
+
+          <Heading
+            data-aos="fade-up"
+            fontSize={heading}
+            bgGradient="linear(to-l, purple.500, magenta.400)"
+            bgClip="text"
+          >
+            Notion Template
           </Heading>
 
-          <Text
-            maxW={600}
-            fontSize="xl"
+          <Heading
             data-aos="fade-up"
-            data-aos-delay={100}
+            data-aos-delay={150}
+            fontSize={heading}
+            bgGradient="linear(to-l, purple.500, magenta.400)"
+            bgClip="text"
           >
-            Be sure to visit our blog every day for the latest updates and
-            carefully selected resources.
-          </Text>
+            for Every Task
+          </Heading>
+
+          <Heading
+            data-aos="fade-up"
+            data-aos-delay={250}
+            fontSize={heading}
+            bgGradient="linear(to-l, purple.500, magenta.400)"
+            bgClip="text"
+          >
+            Every Project
+          </Heading>
+
+  
+        <Text
+          fontSize="lg"
+          textAlign={["center", "center", "start"]}
+          data-aos="fade-up"
+          data-aos-delay={350}
+          maxW={2000}
+        >
+          Explore our Notion templates for all your tasks and projects, and boost your productivity.
+        </Text>
+
         </VStack>
       </Container>
     </Box>
   );
 };
 
-const OverlayBlogPostsBlock = () => {
-  const items = [
-    {
-      href: "#1",
-      title: "Tityre, tu patulae recubans sub tegmine fagi  dolor.",
-      subtitle: "Marketing",
-      body: "Quo usque tandem abutere, Catilina, patientia nostra? Non equidem invideo, miror magis posuere velit aliquet.",
-      avatar: "/images/avatar-m-1.jpg",
-      author: "Edward Hickson",
-      meta: {
-        date: "2022-08-31T15:00:00+0300",
-        info: "7 minutes read",
-      },
-      image: "https://source.unsplash.com/p74ndnYWRY4",
-    },
-    {
-      href: "#2",
-      title:
-        "Design thinking is a human-centered approach to innovation that leverages the designer's toolkit to integrate the needs of people, the possibilities of technology and the requirements of business success.",
-      subtitle: "Design",
-      body: "Design thinking is a human-centered approach to innovation that leverages the designer's toolkit to integrate the needs of people, the possibilities of technology and the requirements of business success.",
-      avatar: "/images/avatar-f-1.jpg",
-      author: "Jaclyn Williams",
-      meta: { date: "2022-08-20T12:30:00+0300", info: "3 minutes read" },
-      image: "https://source.unsplash.com/V4EOZj7g1gw",
-    },
-    {
-      href: "#3",
-      title: "At nos hinc posthac, sitientis piros Afros.",
-      subtitle: "Photography",
-      body: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Quisque placerat facilisis egestas cillum dolore.",
-      avatar: "/images/avatar-m-2.jpg",
-      author: "Donald Chandler",
-      meta: { date: "2022-08-10T18:45:00+0300", info: "11 minutes read" },
-      image: "https://source.unsplash.com/6GZpUJmhOIs",
-    },
-  ];
-  return (
-    <Container maxW="container.xl">
-      <VStack spacing={20}>
-        <Heading size="2xl" data-aos="fade-up" data-aos-delay={0}>
-          The most popular content this week
-        </Heading>
-        <Stack direction={["column", "column", "row"]} w="full" spacing={10}>
-          <OverlayBlogPostBlock
-            flex={1}
-            data-aos="fade-up"
-            data-aos-delay={100}
-            {...items[0]}
-          />
-          <Stack flex={1} spacing={10}>
-            <OverlayBlogPostBlock
-              data-aos="fade-up"
-              data-aos-delay={150}
-              {...items[1]}
-            />
-            <OverlayBlogPostBlock
-              data-aos="fade-up"
-              data-aos-delay={200}
-              {...items[2]}
-            />
-          </Stack>
-        </Stack>
-      </VStack>
-    </Container>
-  );
-};
+// const OverlayBlogPostsBlock = () => {
+//   const items = [
+//     {
+//       href: "#1",
+//       title: "Tityre, tu patulae recubans sub tegmine fagi  dolor.",
+//       subtitle: "Marketing",
+//       body: "Quo usque tandem abutere, Catilina, patientia nostra? Non equidem invideo, miror magis posuere velit aliquet.",
+//       avatar: "/images/avatar-m-1.jpg",
+//       author: "Edward Hickson",
+//       meta: {
+//         date: "2022-08-31T15:00:00+0300",
+//         info: "7 minutes read",
+//       },
+//       image: "/image/notion/whatisnotion.jpg",
+//     },
+//     {
+//       href: "#2",
+//       title:
+//         "Design thinking is a human-centered approach to innovation that leverages the designer's toolkit to integrate the needs of people, the possibilities of technology and the requirements of business success.",
+//       subtitle: "Design",
+//       body: "Design thinking is a human-centered approach to innovation that leverages the designer's toolkit to integrate the needs of people, the possibilities of technology and the requirements of business success.",
+//       avatar: "/images/avatar-f-1.jpg",
+//       author: "Jaclyn Williams",
+//       meta: { date: "2022-08-20T12:30:00+0300", info: "3 minutes read" },
+//       image: "https://source.unsplash.com/V4EOZj7g1gw",
+//     },
+//     {
+//       href: "#3",
+//       title: "At nos hinc posthac, sitientis piros Afros.",
+//       subtitle: "Photography",
+//       body: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Quisque placerat facilisis egestas cillum dolore.",
+//       avatar: "/images/avatar-m-2.jpg",
+//       author: "Donald Chandler",
+//       meta: { date: "2022-08-10T18:45:00+0300", info: "11 minutes read" },
+//       image: "https://source.unsplash.com/6GZpUJmhOIs",
+//     },
+//   ];
+//   return (
+//     <Container maxW="container.xl">
+//       <VStack spacing={20}>
+//         <Heading size="2xl" data-aos="fade-up" data-aos-delay={0}>
+//           The most popular content this week
+//         </Heading>
+//         <Stack direction={["column", "column", "row"]} w="full" spacing={10}>
+//           <OverlayBlogPostBlock
+//             flex={1}
+//             data-aos="fade-up"
+//             data-aos-delay={100}
+//             {...items[0]}
+//           />
+//           <Stack flex={1} spacing={10}>
+//             <OverlayBlogPostBlock
+//               data-aos="fade-up"
+//               data-aos-delay={150}
+//               {...items[1]}
+//             />
+//             <OverlayBlogPostBlock
+//               data-aos="fade-up"
+//               data-aos-delay={200}
+//               {...items[2]}
+//             />
+//           </Stack>
+//         </Stack>
+//       </VStack>
+//     </Container>
+//   );
+// };
 
 interface IOverlayBlogPostBlockProps extends BlockProps {
   title: string;
@@ -364,72 +392,70 @@ const FilteredBlogsBlock: React.FC<BlockProps> = () => {
 
   const items = [
     {
-      cat: "Mobile",
-      href: "#1",
-      title: "You Should Memorize These Ways to Reset Your Cell Service",
-      subtitle: "Android",
-      body: "Quo usque tandem abutere, Catilina, patientia nostra? Non equidem invideo, miror magis posuere velit aliquet.",
-      avatar: "/images/avatar-f-1.jpg",
+      cat: "1.Beginner",
+      href: "/blog-1-1",
+      title: "What is Notion?",
+      subtitle: "",
+      body: "Notion is the name of a web-based application used to streamline the functionality of various online collaboration tools, making it easier for professionals to manage their work by consolidating all the necessary tools into a single platform.",
+      avatar: "/images/notion/avatar-f-1.jpg",
       author: "Luis Vill",
-      meta: {
-        date: "2022-08-31T15:00:00+0300",
-        info: "7 minutes read",
-      },
-      image: "https://source.unsplash.com/4V8uMZx8FYA",
+      meta: { date: "", info: "" },
+      image: "https://source.unsplash.com/m_HRfLhgABo",
     },
     {
-      cat: "Entertainment",
-      href: "#2",
-      title: "What's on HBO Max this month?",
-      subtitle: "Streaming",
-      body: "Prima luce, cum quibus mons aliud  consensu ab eo. Curabitur est gravida et libero vitae dictum. Prima luce, cum quibus mons aliud  consensu ab eo. Curabitur est gravida et libero vitae dictum. Prima luce, cum quibus mons aliud  consensu ab eo. Curabitur est gravida et libero vitae dictum. Prima luce, cum quibus mons aliud  consensu ab eo. Curabitur est gravida et libero vitae dictum.",
-      avatar: "/images/avatar-m-2.jpg",
-      author: "Glenn Peters",
-      meta: { date: "2022-08-20T12:30:00+0300", info: "3 minutes read" },
-      image: "https://source.unsplash.com/EOQhsfFBhRk",
-    },
-    {
-      cat: "Mobile",
-      href: "#3",
-      title: "3 Free Banking Apps for Entrepreneurs",
-      subtitle: "Fintech",
+      cat: "1.Beginner",
+      href: "/blog-1-2",
+      title: "Copy a Notion template? ",
+      subtitle: "",
       body: "Financial institutions and entrepreneurs have a historically complicated relationship. Entrepreneurs need ways to fund their companies and keep business moving, meaning they lean on banks for everything from business loans to checking accounts. ",
-      avatar: "/images/avatar-m-1.jpg",
+      avatar: "/images/notion/avatar-m-1.jpg",
       author: "Austin Chandler",
-      meta: { date: "2022-08-10T18:45:00+0300", info: "11 minutes read" },
+      meta: { date: "", info: "" },
       image: "https://source.unsplash.com/nGc5RT2HmF0",
     },
     {
-      cat: "Product Reviews",
-      href: "#3",
-      title: "Extremely Light Stealth Electric Bike",
-      subtitle: "Electric Bikes",
-      body: "The sleek E-bike has been engineered to be extremely lightweight, yet sturdy. You can barely tell that this is an ebike the frame is so sleek and smooth, giving you a comfortable ride.",
-      avatar: "/images/avatar-f-2.jpg",
+      cat: "1.Beginner",
+      href: "/blog-1-3",
+      title: "Get started with Notion?",
+      subtitle: "",
+      body: "The process of creating a Notion account is consistent across all devices. Users simply need an email address to begin. Notion requests some basic information from users initially.",
+      avatar: "/images/notion/avatar-m-2.jpg",
+      author: "Glenn Peters",
+      // meta: { date: "2022-08-20T12:30:00+0300", info: "3 minutes read" },
+      image: "https://source.unsplash.com/EOQhsfFBhRk",
+    },
+
+    {
+      cat: "2.Advanced",
+      href: "/blog-1-4",
+      title: "10 Ways to Make Notion FASTER",
+      subtitle: "",
+      body: "In this video I'll show you 10 tricks for making the Notion app faster, and for speeding up your workflows in your Notion workspace.",
+      avatar: "/images/notion/avatar-f-2.jpg",
       author: "Caroline Holt",
-      meta: { date: "2022-08-11T11:25:00+0300", info: "6 minutes read" },
+      meta: { date: "", info: "" },
       image: "https://source.unsplash.com/qZ1KmFjfQq8",
     },
     {
-      cat: "Entertainment",
-      href: "#4",
-      title: "Top 10 Dating Programs That Teach You Something About Love",
-      subtitle: "TV Shows",
-      body: "What’s wrong with enjoying a reality dating show, whether or not it’s the best thing ever? It's fun to watch, and sometimes having a basic idea of what's going on in someone else's life can be restful. TV trash or TV treasure, that’s all in the eye of the beholder.",
-      avatar: "/images/avatar-m-3.jpg",
+      cat: "2.Advanced",
+      href: "/blog-1-5",
+      title: "15 MUST-KNOW Notion tips for Productivity",
+      subtitle: "",
+      body: "Notion is a relatively intuitive tool for the most part, but I bet you’ll find at least 1 Notion tip for productivity you didn’t know before in this video on 15 UNCONVENTIONAL Notion Tips for Productivity!",
+      avatar: "/images/notion/avatar-m-3.jpg",
       author: "James Friedlander",
-      meta: { date: "2022-08-13T11:25:00+0300", info: "9 minutes read" },
+      meta: { date: "", info: "" },
       image: "https://source.unsplash.com/aC5_EFhq7Fs",
     },
     {
-      cat: "Business",
-      href: "#4",
-      title: "How to Respond to an Unexpected Meeting With Your Boss",
-      subtitle: "Careers",
-      body: "Nobody likes being asked into an impromptu meeting, especially if they're in the middle of work. Having a meeting at short notice can be troublesome especially if you're swamped with deadlines. The question is, do you just sit tight and hope it won't take too long or do you try and help things along which could end up making matters worse?",
-      avatar: "/images/avatar-f-3.jpg",
+      cat: "2.Advanced",
+      href: "/blog-1-6",
+      title: "9 FREE Notion templates that will 10x your productivity!",
+      subtitle: "",
+      body: "9 free Notion templates you gonna love! These templates will help you manage your tasks, track your progress, achieve your goals, help you stay on top of your work, and ultimately increase your productivity. Download these templates for free down below after giving this video.",
+      avatar: "/images/notion/avatar-f-3.jpg",
       author: "Amy Hirschi",
-      meta: { date: "2022-08-07T11:25:00+0300", info: "5 minutes read" },
+      meta: { date: "", info: "" },
       image: "https://source.unsplash.com/JaoVGh5aJ3E",
     },
   ];
@@ -447,11 +473,11 @@ const FilteredBlogsBlock: React.FC<BlockProps> = () => {
     <Box width="full">
       <Container maxW="container.xl">
         {/* Filter buttons */}
-        <Center mb={10}>
+        {/* <Center mb={10}>
           <Heading size="2xl" data-aos="fade-up" data-aos-delay={0}>
             All Blog Posts
           </Heading>
-        </Center>
+        </Center> */}
         <Center>
           <Wrap
             display="inline-flex"
@@ -539,6 +565,7 @@ const FilteredBlogsBlock: React.FC<BlockProps> = () => {
                       transform: "scale(1.2) rotate(3deg)",
                     }}
                   />
+                  
                 </AspectRatio>
 
                 <VStack align="stretch" mb={[10]}>
@@ -553,7 +580,7 @@ const FilteredBlogsBlock: React.FC<BlockProps> = () => {
                   </Text>
                 </VStack>
 
-                <Box mt="auto" mb={[5]}>
+                {/* <Box mt="auto" mb={[5]}>
                   <Wrap shouldWrapChildren spacingY={0} align="center">
                     <Text as="time" dateTime={item.meta.date}>
                       {timeAgo(item.meta.date)}
@@ -561,7 +588,7 @@ const FilteredBlogsBlock: React.FC<BlockProps> = () => {
                     <Circle size={1} bg="brand.400" />
                     <Text>{item.meta.info}</Text>
                   </Wrap>
-                </Box>
+                </Box> */}
 
                 <HStack
                   // mt="auto"

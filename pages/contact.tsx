@@ -96,7 +96,7 @@ const ContactPage: React.FC = () => {
             pos="absolute"
             zIndex={-1}
           >
-            <Image
+            {/* <Image
               src={useColorModeValue(
                 "/images/world-map-dots-light.png",
                 "/images/world-map-dots-dark.png",
@@ -104,14 +104,14 @@ const ContactPage: React.FC = () => {
               width={720}
               height={405}
               alt="world map dot"
-            />
+            /> */}
           </Box>
 
           <Stack
             alignItems={["stretch", "stretch", "center"]}
             direction={["column", "column", "row"]}
           >
-            {/* <Flex
+            <Flex
               justify={["center", "center", "start"]}
               w="full"
               flex={[1, 1, 1, 2]}
@@ -147,18 +147,18 @@ const ContactPage: React.FC = () => {
                     <Icon color="brand.400" as={FiMapPin} w={6} h={6} />
                   </Flex>
                   <Text fontSize="lg" fontWeight="600">
-                    New York, USA
+                    Beijing, China
                   </Text>
                   <Text>
-                    Eastern Parkway Pedestrian Mall, Brooklyn, NY 11213
+                    Building 112, HuizhongliB, Chaoyang District
                   </Text>
-                  <Text>+1 216-342-3084</Text>
-                  <Link>Get directions</Link>
+                  {/* <Text>+1 216-342-3084</Text> */}
+                  {/* <Link>Get directions</Link> */}
                 </VStack>
               </Box>
             </Flex>
 
-            <Flex
+            {/* <Flex
               data-aos="fade-up"
               data-aos-delay="100"
               justify={["center", "center", "start"]}
@@ -178,6 +178,7 @@ const ContactPage: React.FC = () => {
                 </VStack>
               </Box>
             </Flex> */}
+            
           </Stack>
         </Container>
 

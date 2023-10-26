@@ -156,7 +156,7 @@ const Header: React.FC<I_BlockProps> = ({ bodyColor }) => {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
-                src="/images/office-1.jpg"
+                src="/images/alldoc.jpg"
                 rounded="md"
                 roundedRight={["md", "none", "none", "md"]}
                 alt="office"
@@ -179,7 +179,7 @@ const Header: React.FC<I_BlockProps> = ({ bodyColor }) => {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
-                src="/images/shopping-2.jpg"
+                src="/images/VisionBanner.jpg"
                 rounded="md"
                 roundedLeft={["md", "none", "none", "md"]}
                 alt="shopping"

@@ -1,5 +1,5 @@
 export default {
-  titleTemplate: "%s | Senco React Template",
+  titleTemplate: "%s",
   defaultTitle: "Senco React Template powered by NextJS TypeScript",
   openGraph: {
     type: "website",
