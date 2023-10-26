@@ -317,9 +317,9 @@ const Mission: React.FC<I_BlockProps> = ({ bodyColor }) => {
               height="630" 
               src="https://www.youtube.com/embed/CPYwVRtlxms?si=6--F839EXHN_JyFx" 
               title="YouTube video player" 
-              frameborder="0" 
+              frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen>
+              >
             </iframe>
           </VStack>
         </Stack>
