@@ -50,8 +50,8 @@ const ShoppingCartPage: React.FC = () => {
   return (
     <>
       {/* <NextSeo
-        title="Senco React E-Commerce Shopping Cart"
-        description="Senco React E-Commerce Website Template Shopping Cart example page"
+        title="Notion Template AI Shopping Cart"
+        description="Notion Template AI Website Shopping Cart example page"
       /> */}
       <chakra.main pt={[28]}>
         <Container maxW="container.xl" mb={spacingL}>

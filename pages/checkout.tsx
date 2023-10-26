@@ -55,7 +55,7 @@ const CheckoutPage: React.FC = () => {
     <>
       <NextSeo
         title="Checkout"
-        description="Checkout Senco React E-Commerce Website Template"
+        description="Checkout Notion Template AI Website"
       />
       <chakra.main>
         <VStack mb={0} spacing={10}>

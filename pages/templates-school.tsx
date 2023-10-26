@@ -51,8 +51,8 @@ const Home: React.FC = () => {
   return (
     <>
       <NextSeo
-        title="Senco React E-Commerce"
-        description="Senco React E-Commerce Website Template"
+        title="Notion Template AI"
+        description="Notion Template AI Website"
       />
       <chakra.main>
         <VStack mb={32} spacing={20}>

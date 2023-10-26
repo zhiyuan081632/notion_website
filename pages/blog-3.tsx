@@ -72,8 +72,8 @@ const Blog3Page: React.FC = () => {
   return (
     <>
       <NextSeo
-        title="Senco React E-Commerce"
-        description="Senco React E-Commerce Website Template"
+        title="Notion Template AI"
+        description="Notion Template AI Website"
       />
       <chakra.main>
         <VStack spacing={[10, 10, 20, 32]}>

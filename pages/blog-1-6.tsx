@@ -57,8 +57,8 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <NextSeo
-        title="About Senco React E-Commerce"
-        description="About Senco React E-Commerce Website Template"
+        title="About Notion Template AI"
+        description="About Notion Template AI Website"
       />
       <chakra.main>
         <VStack align="stretch" mb={32} spacing={32}>

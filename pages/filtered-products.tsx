@@ -79,7 +79,7 @@ const FilteredProductsPage: React.FC = () => {
     <>
       <NextSeo
         title="Filtered Products"
-        description="Senco React E-Commerce Website Template"
+        description="Notion Template AI Website"
       />
       <chakra.main pt={88}>
         <PageBreadcrumb />

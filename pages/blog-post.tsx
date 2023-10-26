@@ -53,7 +53,7 @@ const BlogPostPage: React.FC = () => {
   return (
     <>
       <NextSeo
-        title="Senco React E-Commerce"
+        title="Notion Template AI"
         description="Increasing e-commerce revenues with artificial intelligence"
       />
       <chakra.main>

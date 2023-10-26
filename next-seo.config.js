@@ -1,6 +1,6 @@
 export default {
   titleTemplate: "%s",
-  defaultTitle: "Senco React Template powered by NextJS TypeScript",
+  defaultTitle: "Notion Template AI powered by NextJS TypeScript",
   openGraph: {
     type: "website",
     locale: "en_US",

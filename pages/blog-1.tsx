@@ -48,8 +48,8 @@ const Blog1Page: React.FC = () => {
   return (
     <>
       <NextSeo
-        title="Senco React E-Commerce"
-        description="Senco React E-Commerce Website Template"
+        title="Notion Template AI"
+        description="Notion Template AI Website"
       />
       <chakra.main>
         <VStack spacing={[10, 20, 32]}>
@@ -430,7 +430,7 @@ const FilteredBlogsBlock: React.FC<BlockProps> = () => {
       href: "/blog-1-4",
       title: "10 Ways to Make Notion FASTER",
       subtitle: "",
-      body: "In this video I'll show you 10 tricks for making the Notion app faster, and for speeding up your workflows in your Notion workspace.",
+      body: "In this video, I'll demonstrate 10 tricks to optimize the performance of the Notion app and enhance the efficiency of your workflows within your Notion workspace.These tips will also help you streamline and accelerate tasks.",
       avatar: "/images/notion/avatar-f-2.jpg",
       author: "Caroline Holt",
       meta: { date: "", info: "" },
@@ -450,9 +450,9 @@ const FilteredBlogsBlock: React.FC<BlockProps> = () => {
     {
       cat: "2.Advanced",
       href: "/blog-1-6",
-      title: "9 FREE Notion templates that will 10x your productivity!",
+      title: "9 FREE Notion templates that will 10x productivity!",
       subtitle: "",
-      body: "9 free Notion templates you gonna love! These templates will help you manage your tasks, track your progress, achieve your goals, help you stay on top of your work, and ultimately increase your productivity. Download these templates for free down below after giving this video.",
+      body: "9 free Notion templates you gonna love! These templates will help you manage your tasks, track your progress, achieve your goals, help you stay on top of your work, and ultimately increase your productivity.",
       avatar: "/images/notion/avatar-f-3.jpg",
       author: "Amy Hirschi",
       meta: { date: "", info: "" },

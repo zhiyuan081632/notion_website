@@ -108,8 +108,8 @@ const Pricing2Page: React.FC = () => {
   return (
     <>
       <NextSeo
-        title="Senco React E-Commerce"
-        description="Senco React E-Commerce Website Template"
+        title="Notion Template AI"
+        description="Notion Template AI Website"
       />
       <chakra.main bg={useColorModeValue("gray.50", "gray.800")}>
         <VStack pb={32} spacing={32}>
