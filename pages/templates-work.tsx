@@ -58,7 +58,7 @@ const Home: React.FC = () => {
         <VStack mb={32} spacing={20}>
           {/* <HeroBlock
             title="Using a premium E-Commerce template can assist you in turning visitors into buyers"
-            body="Senco is the ideal e-commerce template to power your startup's website, with a variety of pages and layout possibilities, several content sections, and a user interface that is simple to customize."
+            body="NotionTemplate.AI is the ideal e-commerce template to power your startup's website, with a variety of pages and layout possibilities, several content sections, and a user interface that is simple to customize."
           /> */}
           <Divider borderColor="gray.600" />
           <ScreenshotBlock
@@ -222,7 +222,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-home-1.png"
                 layout="fill"
-                alt="Senco Home 1"
+                alt="NotionTemplate.AI Home 1"
               />
             </AspectRatio>
           </Parallax>
@@ -241,7 +241,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-home-2.png"
                 layout="fill"
-                alt="Senco Home 2"
+                alt="NotionTemplate.AI Home 2"
               />
             </AspectRatio>
           </Parallax>
@@ -254,7 +254,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-contact.png"
                 layout="fill"
-                alt="Senco contact page"
+                alt="NotionTemplate.AI contact page"
               />
             </AspectRatio>
           </Parallax>
@@ -274,7 +274,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-product-overview.png"
                 layout="fill"
-                alt="Senco product overview"
+                alt="NotionTemplate.AI product overview"
               />
             </AspectRatio>
           </Parallax>
@@ -294,7 +294,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-pricing-1.png"
                 layout="fill"
-                alt="Senco pricing page"
+                alt="NotionTemplate.AI pricing page"
               />
             </AspectRatio>
           </Parallax>

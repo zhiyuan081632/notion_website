@@ -99,7 +99,7 @@ const Hero = () => {
               objectFit="contain"
               objectPosition="top center"
               src="/images/home-2/product-0.png"
-              alt="Senco product image"
+              alt="NotionTemplate.AI product image"
             />
           </AspectRatio>
           <Parallax max={500} pos="absolute" left={0} top="10%" zIndex={0}>
@@ -200,7 +200,7 @@ const TechSpecsBlock = () => {
           >
             <Image
               src={"/images/home-2/product-0-silver.jpeg"}
-              alt="Senco product image"
+              alt="NotionTemplate.AI product image"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
@@ -266,7 +266,7 @@ const TechSpecsBlock = () => {
           >
             <Image
               src={"/images/home-2/product-0-silver-1.jpeg"}
-              alt="Senco product image"
+              alt="NotionTemplate.AI product image"
               layout="fill"
               objectFit="contain"
               objectPosition="center"
@@ -299,7 +299,7 @@ const QualityBlock = () => {
         >
           <Image
             src={"/images/home-2/audio-quality.jpg"}
-            alt="Senco product image"
+            alt="NotionTemplate.AI product image"
             layout="fill"
             objectFit="cover"
             objectPosition="center"

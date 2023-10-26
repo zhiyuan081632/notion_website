@@ -46,7 +46,7 @@ const Pricing2Page: React.FC = () => {
   const plans = [
     {
       title: "Free",
-      body: "The quickest and easiest way to try Senco",
+      body: "The quickest and easiest way to try NotionTemplate.AI",
       price: 0,
       yearlyPrice: 0,
       isFree: true,
@@ -362,7 +362,7 @@ const CTA: React.FC<ChakraProps & ThemingProps> = (props) => {
       <VStack spacing={10}>
         <VStack textAlign="center">
           <Heading data-aos="fade-up" data-aos-delay="50" size="xl">
-            Utilize The Senco Template to Launch Your Business
+            Utilize The NotionTemplate.AI Template to Launch Your Business
           </Heading>
           <Text
             data-aos="fade-up"
@@ -371,7 +371,7 @@ const CTA: React.FC<ChakraProps & ThemingProps> = (props) => {
             maxW={800}
           >
             Discover all the resources and services you require to launch,
-            manage, and expand your business by giving Senco a free trial.
+            manage, and expand your business by giving NotionTemplate.AI a free trial.
           </Text>
         </VStack>
         <Button
@@ -430,7 +430,7 @@ const Testimonial: React.FC<ChakraProps & ThemingProps> = (props) => {
               </Text>
               <Heading lineHeight={1.2} size="xl" textAlign="center">
                 “ The most popular loyalty program in the world, utilized by
-                millions of the top businesses, helped Senco build its brand. ”
+                millions of the top businesses, helped NotionTemplate.AI build its brand. ”
               </Heading>
             </Flex>
             <Logo1 />
@@ -470,11 +470,11 @@ const FAQBlock: React.FC<ChakraProps & ThemingProps> = (props) => {
 
   const OnlineStore = [
     {
-      title: "How do I get started with Senco?",
+      title: "How do I get started with NotionTemplate.AI?",
       body: "Adipisicing laborum sint ut aliqua est exercitation.",
     },
     {
-      title: "What does a Senco subscription include?",
+      title: "What does a NotionTemplate.AI subscription include?",
       body: "Laboris culpa aliquip proident aliquip ex.",
     },
     {

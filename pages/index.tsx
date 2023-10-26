@@ -117,7 +117,7 @@ const Home3Page: React.FC = () => {
           >
             <Image
               src={"/images/notion/SchoolTemplates.jpeg"}
-              alt="Senco product image"
+              alt="NotionTemplate.AI product image"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
@@ -197,7 +197,7 @@ const Home3Page: React.FC = () => {
           >
             <Image
               src={"/images/notion/WorkTemplates.jpeg"}
-              alt="Senco product image"
+              alt="NotionTemplate.AI product image"
               layout="fill"
               objectFit="contain"
               objectPosition="center"
@@ -223,7 +223,7 @@ const Home3Page: React.FC = () => {
           >
             <Image
               src={"/images/notion/ProjectsTemplates.jpeg"}
-              alt="Senco product image"
+              alt="NotionTemplate.AI product image"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
@@ -301,7 +301,7 @@ const Home3Page: React.FC = () => {
           >
             <Image
               src={"/images/notion/PersonalTemplates.jpeg"}
-              alt="Senco product image"
+              alt="NotionTemplate.AI product image"
               layout="fill"
               objectFit="contain"
               objectPosition="center"

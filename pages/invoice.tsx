@@ -61,7 +61,7 @@ const InvoicePage = (): JSX.Element => {
   const contentBg = useColorModeValue("white", "gray.700");
   return (
     <>
-      <NextSeo title="Invoice" description="Senco Invoice Example Page" />
+      <NextSeo title="Invoice" description="NotionTemplate.AI Invoice Example Page" />
       <chakra.main bg={mainBg}>
         <Container py={20} maxW="container.lg">
           <Box rounded="xl" bg={contentBg} p={10} shadow="xl">
@@ -97,7 +97,7 @@ const InvoicePage = (): JSX.Element => {
               </Heading>
               <Text>
                 If you have any questions concerning this invoice, use the
-                following contact information: <b>account@senco.tld</b>
+                following contact information: <b>account@NotionTemplate.AI</b>
               </Text>
             </Box>
           </Box>

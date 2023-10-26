@@ -26,7 +26,7 @@ import CTA from "@blocks/cta";
 const ContactPage: React.FC = () => {
   return (
     <>
-      <NextSeo title="Contact us" description="Senco contact us" />
+      <NextSeo title="Contact us" description="NotionTemplate.AI contact us" />
       <chakra.main
         // bg="gray.50"
         bg={useColorModeValue("gray.50", "gray.800")}

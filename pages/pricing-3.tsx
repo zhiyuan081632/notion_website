@@ -86,8 +86,8 @@ const Pricing3Page: React.FC = () => {
             items={[
               {
                 icon: FiEdit3,
-                title: "No Senco branding",
-                body: "Remove all Senco branding and have your website seamlessly represent your brand.",
+                title: "No NotionTemplate.AI branding",
+                body: "Remove all NotionTemplate.AI branding and have your website seamlessly represent your brand.",
               },
               {
                 icon: FiUsers,
@@ -151,7 +151,7 @@ const HeroBlock = ({ items = [] }) => {
           fontSize={heading}
           data-aos="fade-up"
         >
-          All Users of Senco Have{" "}
+          All Users of NotionTemplate.AI Have{" "}
           <Text as="span" fontWeight={800} color="brand.400">
             Unlimited Access
           </Text>{" "}
@@ -213,7 +213,7 @@ const IntroBlock = () => {
             data-aos="fade-up"
             data-aos-delay={150}
           >
-            Senco Premium delivers empowering features designed for teams and
+            NotionTemplate.AI Premium delivers empowering features designed for teams and
             creative sophisticated demands.
           </Text>
           <Text fontSize="xl" data-aos="fade-up" data-aos-delay={200}>
@@ -298,7 +298,7 @@ const CTABlock: React.FC<ChakraProps & ThemingProps> = (props) => {
         <VStack spacing={10}>
           <VStack textAlign="center">
             <Heading data-aos="fade-up" data-aos-delay="50" size="xl">
-              Utilize The Senco Template to Launch Your Business
+              Utilize The NotionTemplate.AI to Launch Your Business
             </Heading>
             <Text
               data-aos="fade-up"
@@ -307,7 +307,7 @@ const CTABlock: React.FC<ChakraProps & ThemingProps> = (props) => {
               maxW={800}
             >
               Discover all the resources and services you require to launch,
-              manage, and expand your business by giving Senco a free trial.
+              manage, and expand your business by giving NotionTemplate.AI a free trial.
             </Text>
           </VStack>
           <Button
@@ -351,11 +351,11 @@ const FAQBlock: React.FC<ChakraProps & ThemingProps> = (props) => {
 
   const OnlineStore = [
     {
-      title: "How do I get started with Senco?",
+      title: "How do I get started with NotionTemplate.AI?",
       body: "Adipisicing laborum sint ut aliqua est exercitation.",
     },
     {
-      title: "What does a Senco subscription include?",
+      title: "What does a NotionTemplate.AI subscription include?",
       body: "Laboris culpa aliquip proident aliquip ex.",
     },
     {

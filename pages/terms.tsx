@@ -65,13 +65,13 @@ const TermsPage: React.FC = (): JSX.Element => {
   return (
     <>
       <NextSeo
-        title="Senco Terms and Conditions"
-        description="Senco Terms and Conditions Example Page"
+        title="NotionTemplate.AI Terms and Conditions"
+        description="NotionTemplate.AI Terms and Conditions Example Page"
       />
       <chakra.main>
         <PageTitle
           subtitle="Terms"
-          title="Senco Terms & Conditions"
+          title="NotionTemplate.AI Terms & Conditions"
           body="Effective date: 1 January 2022"
           bg={useColorModeValue("gray.100", "gray.900")}
         />
@@ -127,9 +127,7 @@ const TermsPage: React.FC = (): JSX.Element => {
                     >
                       <Text>
                         Thanks for using our products and services ("Services").
-                        The Services are provided by Senco Ltd. ("Senco"),
-                        located at 132 Boroughbridge Road B12 18SP, Birmingham
-                        United Kingdom.
+                        The Services are provided by NotionTemplate.AI ("NotionTemplate.AI"),
                       </Text>
 
                       <Text>

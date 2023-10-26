@@ -220,10 +220,10 @@ const Feature: React.FC<I_BlockProps> = ({ bodyColor }) => {
           <Box data-aos="fade-up" data-aos-delay={200}>
             <VStack align="stretch" spacing={[2, 2, 4]}>
               <Text variant="subtitle" fontSize="sm">
-                Built with Senco
+                Built with NotionTemplate.AI
               </Text>
               <Heading>
-                Get started now easily in the e-commerce with Senco template
+                Get started now easily in the e-commerce with NotionTemplate.AI template
               </Heading>
               <Text color={bodyColor} fontSize="lg">
                 Pellentesque habitant morbi tristique senectus et netus. At nos
@@ -596,7 +596,7 @@ const LearnMoreAboutUs: React.FC<I_BlockProps> = ({ bodyColor, bg }) => {
       <Container maxW="container.xl">
         <VStack spacing={[10, 10, 14]}>
           <Heading as="h3" size="lg">
-            Learn more about Senco
+            Learn more about NotionTemplate.AI
           </Heading>
           <Stack spacing={[10, 10, 20]} direction={["column", "column", "row"]}>
             {items.map((item) => (
@@ -636,7 +636,7 @@ const CTA: React.FC<I_BlockProps> = ({ bodyColor }) => {
       <Container maxW="46rem">
         <VStack textAlign="center" spacing={[10, 10, 10]}>
           <Text color={bodyColor} fontSize="2xl" fontWeight={400}>
-            Try Senco for free, and explore all the tools and services for you
+            Try NotionTemplate.AI for free, and explore all the tools and services for you
             need to start, run, and grow your business.
           </Text>
           <Button onClick={mouseDownHandler} size="jumbo">

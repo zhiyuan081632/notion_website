@@ -1,11 +1,11 @@
 const Site = {
-  name: "Notion Template",
+  name: "Notion Template AI",
   company: "AIDU LLC.",
   slogan:
-    "Notion Template for for Every Task, Every Project.",
+    "Notion Template for Every Task, Every Project.",
   description:
     "",
-  address: "132 Boroughbridge Road B12 18SP, Birmingham United Kingdom",
+  address: "Building 112, HuizhongliB, Chaoyang District, Beijing, China",
   defaultCurrency: "USD",
   defaultCurrencySymbol: "$",
   // TEMPLATE MARKET DEFINITIONS

@@ -4,8 +4,8 @@ export default {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://senco.themebiotic.com/",
-    site_name: "Senco",
+    url: "https://notiontemplate.ai/",
+    site_name: "NotionTemplate.AI",
   },
   twitter: {
     handle: "@themebiotic",

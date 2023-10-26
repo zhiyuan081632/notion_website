@@ -58,7 +58,7 @@ const Home: React.FC = () => {
         <VStack mb={32} spacing={20}>
           {/* <HeroBlock
             title="Using a premium E-Commerce template can assist you in turning visitors into buyers"
-            body="Senco is the ideal e-commerce template to power your startup's website, with a variety of pages and layout possibilities, several content sections, and a user interface that is simple to customize."
+            body="NotionTemplate.AI is the ideal e-commerce template to power your startup's website, with a variety of pages and layout possibilities, several content sections, and a user interface that is simple to customize."
           /> */}
           <Divider borderColor="gray.600" />
           <ScreenshotBlock
@@ -74,14 +74,14 @@ const Home: React.FC = () => {
               },
               {
                 image: "/images/notion/HabitTracker.png",
-                title: "Habit tracker",
+                title: "Habit Tracker",
                 href: "https://notion-templates.notion.site/Habit-Tracker-095566615d314e2ba91640772339c29d",
                 
                 
               },
               {
                 image: "/images/notion/ReadingList.png",
-                title: "Reading list",
+                title: "Reading List",
                 href: "https://www.notion.so/Reading-List-14918425560f4ec5b303314a29eb53e1",
               },
             ]}
@@ -115,7 +115,7 @@ const Home: React.FC = () => {
             items={[
               {
                 image: "/images/notion/MinimalPomodoroTracker.png",
-                title: "Minimal pomodoro tracker",
+                title: "Minimal Pomodoro Tracker",
                 href: "https://ash-earwig-2b1.notion.site/54b1456e0c2144ec8ce6696595e540d4",
               },
               {
@@ -125,7 +125,7 @@ const Home: React.FC = () => {
               },
               {
                 image: "/images/notion/RecipesShoppingListandMealPlan.png",
-                title: "Recipes, shopping list and meal plan",
+                title: "Recipes, Shopping List and Meal Plan",
                 href: "https://overjoyed-basilisk-506.notion.site/Recipes-shopping-list-and-meal-plan-4b13b78f43d446d5bb9785de284f9ee4",
               },
             ]}
@@ -222,7 +222,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-home-1.png"
                 layout="fill"
-                alt="Senco Home 1"
+                alt="NotionTemplate.AI Home 1"
               />
             </AspectRatio>
           </Parallax>
@@ -241,7 +241,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-home-2.png"
                 layout="fill"
-                alt="Senco Home 2"
+                alt="NotionTemplate.AI Home 2"
               />
             </AspectRatio>
           </Parallax>
@@ -254,7 +254,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-contact.png"
                 layout="fill"
-                alt="Senco contact page"
+                alt="NotionTemplate.AI contact page"
               />
             </AspectRatio>
           </Parallax>
@@ -274,7 +274,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-product-overview.png"
                 layout="fill"
-                alt="Senco product overview"
+                alt="NotionTemplate.AI product overview"
               />
             </AspectRatio>
           </Parallax>
@@ -294,7 +294,7 @@ const HeroBlock: React.FC<{ title: string; body: string }> = ({
                 objectPosition="top center"
                 src="/images/page-pricing-1.png"
                 layout="fill"
-                alt="Senco pricing page"
+                alt="NotionTemplate.AI pricing page"
               />
             </AspectRatio>
           </Parallax>

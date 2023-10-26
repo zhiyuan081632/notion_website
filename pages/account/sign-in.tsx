@@ -46,7 +46,7 @@ const SignInPage = () => {
   );
   return (
     <>
-      <NextSeo title="Sign In" description="Senco Sign In Example Page" />
+      <NextSeo title="Sign In" description="NotionTemplate.AI Sign In Example Page" />
       <chakra.main>
         <Stack
           pt={[16, 16, 0]}

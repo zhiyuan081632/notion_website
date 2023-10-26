@@ -240,7 +240,7 @@ const Blog3Page: React.FC = () => {
           <Box width="full" pos="relative">
             <Container pos="relative" zIndex={1} maxW="container.xl">
               <CTABlock
-                title="Increase Conversions With Senco"
+                title="Increase Conversions With NotionTemplate.AI"
                 subtitle="Begin dazzling your audience with amazing web pages right away"
                 maxW="container.xl"
                 width="full"

@@ -169,7 +169,7 @@ export const main = [
     //     href: "/blog-post",
     //     image: "/images/page-blog-post.png",
     //     description:
-    //       "Senco provides several variants for popular sites for customisation.",
+    //       "NotionTemplate.AI provides several variants for popular sites for customisation.",
     //   },
     // ],
   },

@@ -122,7 +122,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
             objectFit="cover"
             objectPosition="50% 25%"
             src="https://source.unsplash.com/pItSSy1-7R8"
-            alt="Senco home 3 hero"
+            alt="NotionTemplate.AI home 3 hero"
           />
         </Flex>
 
@@ -668,7 +668,7 @@ const SingleProductBlock: React.FC<BlockProps> = () => {
           <Box width="full">
             <AspectRatio ratio={1} pos="relative">
               <Image
-                alt="senco react template"
+                alt="NotionTemplate.AI react template"
                 src="https://source.unsplash.com/oFgXybl7z3E"
                 layout="fill"
                 objectFit="cover"

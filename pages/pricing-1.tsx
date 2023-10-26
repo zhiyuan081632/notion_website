@@ -214,10 +214,10 @@ const CTA: React.FC<ChakraProps & ThemingProps> = (props) => {
       <VStack spacing={10}>
         <VStack textAlign="center">
           <Heading data-aos="fade-up" data-aos-delay="50" size="xl">
-            Start your business journey with Senco template
+            Start your business journey with NotionTemplate.AI
           </Heading>
           <Text data-aos="fade-up" data-aos-delay="100" fontSize="xl">
-            Try Senco for free, and explore all the tools and services you need
+            Try NotionTemplate.AI for free, and explore all the tools and services you need
             to start, run, and grow your business.
           </Text>
         </VStack>
@@ -275,7 +275,7 @@ const Testimonial: React.FC<ChakraProps & ThemingProps> = (props) => {
                 Stories
               </Text>
               <Heading lineHeight={1.2} size="xl" textAlign="center">
-                “Senco offers empowering features designed for teams and offers
+                “NotionTemplate.AI offers empowering features designed for teams and offers
                 products with a wide range of creative sophistication demands.”
               </Heading>
             </Flex>
@@ -457,11 +457,11 @@ const FAQBlock: React.FC<ChakraProps & ThemingProps> = (props) => {
 
   const OnlineStore = [
     {
-      title: "How do I get started with Senco?",
+      title: "How do I get started with NotionTemplate.AI?",
       body: "Adipisicing laborum sint ut aliqua est exercitation.",
     },
     {
-      title: "What does a Senco subscription include?",
+      title: "What does a NotionTemplate.AI subscription include?",
       body: "Laboris culpa aliquip proident aliquip ex.",
     },
     {
@@ -600,7 +600,7 @@ const FeaturesBlock: React.FC<ChakraProps & ThemingProps> = (props) => {
               Sell everywhere
             </Heading>
             <Text fontSize="lg">
-              With one comprehensive platform, Senco tools and accessories
+              With one comprehensive platform, NotionTemplate.AI tools and accessories
               empower you to sell products and services to anyone, anywhere.
             </Text>
             <Link fontWeight={600}>Explore sales tools</Link>

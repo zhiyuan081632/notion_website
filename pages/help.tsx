@@ -31,7 +31,7 @@ const FAQPage: React.FC = (): JSX.Element => {
           pb={[14, 14, 20, 32]}
           subtitle="Support"
           title="How we can help?"
-          body="Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please chat to our friendly team via hello@senco.tld."
+          body="Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please chat to our friendly team via NotionTemplate.AI"
           bg={useColorModeValue("gray.100", "gray.900")}
         />
         <Container maxW="container.md">

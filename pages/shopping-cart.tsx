@@ -522,13 +522,13 @@ const Subscribe = () => {
     <Box bg={bg} py={[20, 20, 32]}>
       <Container maxW="container.xl">
         <VStack spacing={[10]}>
-          <Heading>Get the latest from Senco</Heading>
+          <Heading>Get the latest from NotionTemplate.AI</Heading>
 
           <VStack w={"full"} maxW={640}>
             <Stack w="full" spacing={4} direction={["column", "column", "row"]}>
               <Input
                 type="text"
-                placeholder={"example@senco.themebiotic.com"}
+                placeholder={"example@NotionTemplate.AI"}
                 color={useColorModeValue("gray.800", "gray.200")}
                 bg={inputBg}
                 rounded="full"

@@ -125,7 +125,7 @@ const ContactForm: React.FC<ChakraProps & ThemingProps> = ({
               <FormLabel htmlFor="email">Your Email</FormLabel>
               <Input
                 id="email"
-                placeholder="william.bell@senco.tld"
+                placeholder=""
                 focusBorderColor={`${colorScheme}.400`}
                 size="lg"
                 bg={inputBG}

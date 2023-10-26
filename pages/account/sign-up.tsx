@@ -60,7 +60,7 @@ const SignUpPage = () => {
   const color = theme.colorScheme; // global default primary theme color
   return (
     <>
-      <NextSeo title="Sign Up" description="Senco Sign Up Example Page" />
+      <NextSeo title="Sign Up" description="NotionTemplate.AI Sign Up Example Page" />
       <chakra.main>
         <Flex
           minH={"100vh"}
@@ -84,8 +84,8 @@ const SignUpPage = () => {
             <VStack textAlign="center">
               <Text fontSize="2xl">
                 We have no regrets! It's the perfect solution for our business.
-                Senco is worth much more than I paid. I can't say enough about
-                Senco
+                NotionTemplate.AI is worth much more than I paid. I can't say enough about
+                NotionTemplate.AI
               </Text>
               <Avatar
                 as={Box}

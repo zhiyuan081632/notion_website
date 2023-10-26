@@ -40,7 +40,7 @@ const ResetPasswordPage = () => {
     <>
       <NextSeo
         title="Reset Password"
-        description="Senco Reset Password Example Page"
+        description="NotionTemplate.AI Reset Password Example Page"
       />
       <chakra.main bg={useColorModeValue("gray.50", "gray.700")}>
         <Flex
