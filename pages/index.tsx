@@ -57,51 +57,6 @@ const Home3Page: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
-
-
-
-  const [userInput, setUserInput] = useState('');
-  const [gptResponse, setGptResponse] = useState('');
-
-
-    // 创建状态变量来存储输入框的值和服务端返回的数据
-    // const [inputValue, setInputValue] = useState('');
-    // const [summaryData, setSummaryData] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-
-  const handleGptResponse = async () => {
-    // 定义API的URL
-    const API_URL = "https://api.openai.com/v1/chat/completions";
-
-    // API请求的header和body
-    const requestOptions = {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer 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`, // 替换为你的OpenAI API密钥
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        "model": "gpt-3.5-turbo",
-        "messages": [{"role": "user", "content": userInput}],
-        "temperature": 0.7
-      })
-    };
-
-    try {
-      setIsLoading(true);
-      const response = await fetch(API_URL, requestOptions);
-      const data = await response.json();
-      setGptResponse(`${data.choices[0]['message']['content']}`);
-    } catch (error) {
-      console.error("与OpenAI API通信时发生错误：", error);
-      setGptResponse("发生了错误，请稍后再试");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-
-
   return (
     <>
       <NextSeo
@@ -244,8 +199,9 @@ const Home3Page: React.FC = () => {
               src={"/images/notion/WorkTemplates.jpeg"}
               alt="NotionTemplate.AI product image"
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
               objectPosition="center"
+              borderEndRadius={["none", "none", "2xl", "2xl"]}
             />
           </AspectRatio>
         </Stack>
@@ -348,7 +304,7 @@ const Home3Page: React.FC = () => {
               src={"/images/notion/PersonalTemplates.jpeg"}
               alt="NotionTemplate.AI product image"
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
               objectPosition="center"
             />
           </AspectRatio>
@@ -358,10 +314,6 @@ const Home3Page: React.FC = () => {
     </>
   );
 };
-
-function handleSearch() {
-  // 处理搜索逻辑
-}
 
 
 interface BlockProps extends ChakraProps, ThemingProps {
@@ -375,7 +327,8 @@ const HeroBlock: React.FC<BlockProps> = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGptResponse = async () => {
-    // 定义API的URL
+    
+    // 定义ChatGPT API的URL
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
     // API请求的header和body
@@ -387,7 +340,10 @@ const HeroBlock: React.FC<BlockProps> = () => {
       },
       body: JSON.stringify({
         "model": "gpt-3.5-turbo",
-        "messages": [{"role": "user", "content": userInput}],
+        "messages": [
+          {"role": "system", "content": "You are NotionAI Assistant"},
+          {"role": "user", "content": userInput},
+        ],
         "temperature": 0.7
       })
     };
@@ -484,7 +440,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                 <Stack direction="row" spacing={4} align="center">
                     <Input
                         type="text"
-                        placeholder="Ask ChatGPT about Notion"
+                        placeholder="Ask NotionAI some questions"
                         borderColor="blue.500"
                         borderWidth="2px"
                         _hover={{ borderColor: 'blue.600' }}
