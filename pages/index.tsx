@@ -463,7 +463,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                         size="lg"
                         onClick={handleGptResponse}
                     >
-                        {isLoading ? 'Loading...' : 'ASK'}
+                        {isLoading ? 'Loading...' : 'Submit'}
                     </Button>
                 </Stack>
               </InputGroup>
