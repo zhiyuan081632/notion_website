@@ -143,66 +143,6 @@ const Home3Page: React.FC = () => {
             />
           </Box> */}
 
-
-        <Divider borderColor="gray.600" />
-{/* 
-        <VStack spacing={10}>
-          <InputGroup>
-            <Input
-              type="text"
-              placeholder="Ask about Notion"
-              borderColor="blue.500"
-              borderWidth="2px"
-              _hover={{ borderColor: 'blue.600' }}
-              _focus={{ borderColor: 'blue.600' }}
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-            />
-
-            <Button
-                data-aos="fade-up"
-                data-aos-delay={450}
-                variant="outline"
-                size="lg"
-                onClick={handleGptResponse}
-              >
-                Submit
-              </Button> 
-			        
-          </InputGroup>   
-          {gptResponse && <Text>{gptResponse}</Text>}
-        </VStack>  */}
-
-      {/* 显示输入框和按钮 */}
-
-
-        <VStack spacing={5}>
-          <InputGroup>
-            <Input
-              type="text"
-              placeholder="Ask ChatGPT about Notion"
-              borderColor="blue.500"
-              borderWidth="2px"
-              _hover={{ borderColor: 'blue.600' }}
-              _focus={{ borderColor: 'blue.600' }}
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-            />
-
-            <Button
-                data-aos="fade-up"
-                data-aos-delay={450}
-                variant="outline"
-                size="lg"
-                onClick={handleGptResponse}
-              >
-                {isLoading ? 'Loading...' : 'Submit'}
-            </Button> 
-            
-          </InputGroup> 
-          {gptResponse && <Text>{gptResponse}</Text>}  
-        </VStack> 
-
         <Divider borderColor="gray.600" />
         <Stack
           overflow="hidden"
@@ -419,12 +359,52 @@ const Home3Page: React.FC = () => {
   );
 };
 
+function handleSearch() {
+  // 处理搜索逻辑
+}
+
+
 interface BlockProps extends ChakraProps, ThemingProps {
   // items?: any;
 }
 
 const HeroBlock: React.FC<BlockProps> = () => {
   const heading = "clamp(28px, 5vw, 10rem)";
+  const [userInput, setUserInput] = useState('');
+  const [gptResponse, setGptResponse] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleGptResponse = async () => {
+    // 定义API的URL
+    const API_URL = "https://api.openai.com/v1/chat/completions";
+
+    // API请求的header和body
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer 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`, // 替换为你的OpenAI API密钥
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        "model": "gpt-3.5-turbo",
+        "messages": [{"role": "user", "content": userInput}],
+        "temperature": 0.7
+      })
+    };
+
+    try {
+      setIsLoading(true);
+      const response = await fetch(API_URL, requestOptions);
+      const data = await response.json();
+      setGptResponse(`${data.choices[0]['message']['content']}`);
+    } catch (error) {
+      console.error("与OpenAI API通信时发生错误：", error);
+      setGptResponse("发生了错误，请稍后再试");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <Box width="full">
       {/* <Container maxW="container.xl"> */}
@@ -450,6 +430,8 @@ const HeroBlock: React.FC<BlockProps> = () => {
             alt="Notion home 3 hero"
           />
         </Flex>
+
+        
 
       
 
@@ -498,8 +480,38 @@ const HeroBlock: React.FC<BlockProps> = () => {
                 Explore our Notion templates for all your tasks and projects, and boost your productivity.
               </Text>
               
+              <InputGroup>
+                <Stack direction="row" spacing={4} align="center">
+                    <Input
+                        type="text"
+                        placeholder="Ask ChatGPT about Notion"
+                        borderColor="blue.500"
+                        borderWidth="2px"
+                        _hover={{ borderColor: 'blue.600' }}
+                        _focus={{ borderColor: 'blue.600' }}
+                        value={userInput}
+                        onChange={(e) => setUserInput(e.target.value)}
+                        width="650px"   // 设置文本框的宽度
+                        height="40px"  // 设置文本框的高度
+                        onKeyPress={e => {
+                          if (e.key === 'Enter') {
+                              handleGptResponse();
+                          }
+                      }}
+                    />
 
-
+                    <Button
+                        data-aos="fade-up"
+                        data-aos-delay={450}
+                        variant="outline"
+                        size="lg"
+                        onClick={handleGptResponse}
+                    >
+                        {isLoading ? 'Loading...' : 'ASK'}
+                    </Button>
+                </Stack>
+              </InputGroup>
+              {gptResponse && <Text>{gptResponse}</Text>} 
             </VStack>
           </Flex>
         </Flex>
