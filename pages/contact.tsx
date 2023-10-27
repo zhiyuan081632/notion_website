@@ -128,10 +128,10 @@ const ContactPage: React.FC = () => {
                 >
                   Our offices
                 </Heading>
-                <Text fontSize="xl" maxW={400}>
+                {/* <Text fontSize="xl" maxW={400}>
                   We look forward to meeting you and offering solutions to your
                   software and design problems.
-                </Text>
+                </Text> */}
               </VStack>
             </Flex>
 

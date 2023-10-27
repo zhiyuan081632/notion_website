@@ -273,9 +273,9 @@ const Home3Page: React.FC = () => {
               Personal templates
               </Text>
               <Text>
-                Looking for a more effective method to streamline your life? 
-                Whether it's daily schedules and task lists or home-related information and habit tracking, 
-                Notion's personal templates have got you covered for handling whatever life throws your way.
+                Looking for a more efficient way to simplify your life? 
+                Whether you need to manage your daily schedules or keep track of home-related information and habits. 
+                Notion's personal templates have you covered for handling whatever challenges life throws your way.
               </Text>
               <Link
                     href="/templates-personal"

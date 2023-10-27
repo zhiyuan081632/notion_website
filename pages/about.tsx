@@ -126,9 +126,9 @@ const Header: React.FC<I_BlockProps> = ({ bodyColor }) => {
               data-aos="fade-up"
               data-aos-delay={150}
             >
-              Notion Pages was built by Notion fans, this is not an official site. 
-              However, it serves as a valuable resource for the Notion community, offering tips, templates, and insights into how to make the most of the Notion app. 
-              The creators of Notion Pages are passionate about the platform and aim to enhance the user experience by providing a platform for sharing knowledge and ideas related to Notion.
+              Notion Pages is the brainchild of fervent Notion aficionados, and it bears no official imprimatur. 
+              Yet, it stands as a priceless wellspring for the Notion community, where one can uncover pearls of wisdom, templates that sparkle, and insights that illuminate the path to harness the full potential of the Notion app. 
+              The custodians of Notion Pages are bound by an ardent love for this platform and are driven by a singular purpose: to enrich the user's journey by providing a sacred space for the communion of knowledge and the flourishing of ideas in the realm of Notion.
             </Text>
           </VStack>
 
@@ -310,10 +310,10 @@ const Mission: React.FC<I_BlockProps> = ({ bodyColor }) => {
         <Stack spacing={[10, 10, 20]}>
           <VStack textAlign="center">
             <Text variant="subtitle">Our Mission</Text>
-            <Heading>Create a better Notion tools community</Heading>
+            <Heading>Build a better Notion Tools Community</Heading>
             <Text color={bodyColor} fontSize={["xl", "xl", "2xl"]}>
-              Our mission is dedicated to the creation and nurturing of a thriving Notion tools community, where users can collaborate, share ideas, and develop innovative tools to enhance their Notion experience. 
-              We aspire to continually improve and enrich this community, making it a valuable resource for Notion enthusiasts around the world.
+            Our mission is dedicated to the cultivation and nurturing of a thriving Notion tools community, where users can harmoniously collaborate, exchange the symphony of ideas, and craft innovative tools to elevate their Notion experience into a masterpiece. 
+            We aspire to perpetually refine and embellish this community, shaping it into a cherished gem for Notion enthusiasts worldwide, a place where the artistry of productivity finds its canvas.
             </Text>
           </VStack>
         </Stack>

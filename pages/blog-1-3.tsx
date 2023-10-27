@@ -311,7 +311,7 @@ const Mission: React.FC<I_BlockProps> = ({ bodyColor }) => {
         <Stack spacing={[10, 10, 20]}>
           <VStack textAlign="center">
             {/* <Text variant="subtitle">Our Mission</Text>  */}
-            <Heading>What is Notion?</Heading>
+            <Heading>Get started with Notion?</Heading>
 
             <iframe 
               width="1120" 
