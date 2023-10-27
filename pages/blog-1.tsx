@@ -47,10 +47,10 @@ const Blog1Page: React.FC = () => {
 
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title="Notion Template AI"
         description="Notion Template AI Website"
-      />
+      /> */}
       <chakra.main>
         <VStack spacing={[10, 20, 32]}>
           <HeroBlock pt={28} pb={28} />

@@ -65,28 +65,30 @@ const AboutPage: React.FC = () => {
           <Header bodyColor={gray} />
           <Feature bodyColor={gray} />
           {/* <Stats bodyColor={gray} /> */}
-          <Mission bodyColor={gray} />
-          <VStack>
+          {/* <Mission bodyColor={gray} /> */}
+          {/* <VStack>
             <Divider maxW="30rem" />
-          </VStack>
-          {/* <ContentBox
-            bodyColor={gray}
-            subtitle="Our Community"
-            title="We have a creative community"
-            body="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum ceteris in veneratione tui montes, nascetur mus. Cras mattis iudicium purus sit amet fermentum. At nos hinc posthac, sitientis piros Afros. Magna pars studiorum, prodita quaerimus."
-            image="/images/team-3.jpg"
-          />
+          </VStack> */}
+
           <ContentBox
+            bodyColor={gray}
+            subtitle=""
+            title="How to copy a Notion template?"
+            body="All it takes is one click to duplicate a template."
+            image="/images/notion/CopyTemplate.jpg"
+          />
+          {/* <ContentBox
             bodyColor={gray}
             direction={["column", "column", "row-reverse"]}
             subtitle="Open Source Community"
             title="We grow with open collaboration"
             body="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum ceteris in veneratione tui montes, nascetur mus. Cras mattis iudicium purus sit amet fermentum. At nos hinc posthac, sitientis piros Afros. Magna pars studiorum, prodita quaerimus."
             image="/images/team-6.jpg"
-          /> */}
-          {/* <Team bodyColor={gray} /> */}
-          {/* <LearnMoreAboutUs bg={lightGray} bodyColor={gray} /> */}
-          {/* <CTA bodyColor={gray} /> */}
+          />  */}
+          
+          {/* <Team bodyColor={gray} />
+          <LearnMoreAboutUs bg={lightGray} bodyColor={gray} />
+          <CTA bodyColor={gray} /> */}
         </VStack>
       </chakra.main>
     </>
@@ -138,7 +140,7 @@ const Header: React.FC<I_BlockProps> = ({ bodyColor }) => {
             h="full"
             flex="1"
           >
-            <AspectRatio
+            {/* <AspectRatio
               pos={["unset", "unset", "unset", "absolute"]}
               mb={[5, 0, 0, 0]}
               left={0}
@@ -160,7 +162,7 @@ const Header: React.FC<I_BlockProps> = ({ bodyColor }) => {
                 roundedRight={["md", "none", "none", "md"]}
                 alt="office"
               />
-            </AspectRatio>
+            </AspectRatio> */}
             {/* <AspectRatio
               pos={["unset", "unset", "unset", "absolute"]}
               right={0}
@@ -313,7 +315,7 @@ const Mission: React.FC<I_BlockProps> = ({ bodyColor }) => {
             <Text color={bodyColor} fontSize={["xl", "xl", "2xl"]} textAlign="left" lineHeight="2">
               All it takes is one click to duplicate a template.
             </Text>
-            <Image
+            {/* <Image
                 flex="1"
                 layout="fill"
                 objectFit="cover"
@@ -322,7 +324,7 @@ const Mission: React.FC<I_BlockProps> = ({ bodyColor }) => {
                 rounded="md"
                 roundedLeft={["md", "none", "none", "md"]}
                 alt="shopping"
-              />
+              /> */}
           </VStack>
         </Stack>
       </Container>

@@ -239,12 +239,12 @@ const DesktopSubNav = ({
               transform="translateX(-10px)"
               _groupHover={{ opacity: 1, transform: "translateX(0)" }}
             >
-              <Icon
+              {/* <Icon
                 as={ChevronRightIcon}
                 color={`${colorScheme}.400`}
                 w={5}
                 h={5}
-              />
+              /> */}
             </Flex>
           )}
         </Stack>

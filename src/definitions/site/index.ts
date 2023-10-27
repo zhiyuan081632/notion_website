@@ -1,6 +1,6 @@
 const Site = {
   name: "Notion Template AI",
-  company: "AIDU LLC.",
+  company: "AIDU.",
   slogan:
     "Notion Template for Every Task, Every Project.",
   description:
