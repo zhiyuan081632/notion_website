@@ -46,6 +46,10 @@ import Site from "@definitions/site";
 
 import Image from "@components/image";
 
+// Google Analytics
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+
 const AboutPage: React.FC = () => {
   const theme = useContext(ThemeColorContext);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -53,6 +57,13 @@ const AboutPage: React.FC = () => {
 
   const gray = useColorModeValue("gray.600", "gray.400");
   const lightGray = useColorModeValue("gray.50", "gray.900");
+
+  // Google Analytics
+  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
+  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+  useEffect(() => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
@@ -84,9 +95,9 @@ const AboutPage: React.FC = () => {
             body="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum ceteris in veneratione tui montes, nascetur mus. Cras mattis iudicium purus sit amet fermentum. At nos hinc posthac, sitientis piros Afros. Magna pars studiorum, prodita quaerimus."
             image="/images/team-6.jpg"
           /> */}
-          <Team bodyColor={gray} />
+          {/* <Team bodyColor={gray} />
           <LearnMoreAboutUs bg={lightGray} bodyColor={gray} />
-          <CTA bodyColor={gray} />
+          <CTA bodyColor={gray} /> */}
         </VStack>
       </chakra.main>
     </>

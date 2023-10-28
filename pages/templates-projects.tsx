@@ -43,10 +43,22 @@ import Site from "@definitions/site";
 import Image from "@components/image";
 import MotionBox from "@components/motion/motion-box";
 
+// Google Analytics
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+
 const Home: React.FC = () => {
   const theme = useContext(ThemeColorContext);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
+
+  // Google Analytics
+  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
+  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+  useEffect(() => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+  
 
   return (
     <>

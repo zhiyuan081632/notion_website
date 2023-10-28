@@ -50,7 +50,7 @@ import Image from "@components/image";
 import CTA from "@blocks/cta";
 import { useState } from "react";
 
- // Google Analytics
+// Google Analytics
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
@@ -60,7 +60,7 @@ const Home3Page: React.FC = () => {
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
   // Google Analytics
-  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID: G-TBGDDBCWMQ 
+  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
   ReactGA.initialize(GOOGLE_ANALYTICS_ID);
   useEffect(() => {
       ReactGA.pageview(window.location.pathname + window.location.search);
@@ -312,13 +312,13 @@ const HeroBlock: React.FC<BlockProps> = () => {
     const requestOptions = {
       method: "POST",
       headers: {
-        "Authorization": `Bearer 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`,
+        "Authorization": `Bearer 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`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
         "model": "gpt-3.5-turbo",
         "messages": [
-          {"role": "system", "content": "You are NotionAI Assistant"},
+          {"role": "system", "content": "You are AI Assistant"},
           {"role": "user", "content": userInput},
         ],
         "temperature": 0.7
@@ -425,7 +425,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                 <Stack direction="row" spacing={4} align="center">
                     <Input
                         type="text"
-                        placeholder="Ask NotionAI some questions"
+                        placeholder="Ask AI some questions"
                         borderColor="blue.500"
                         borderWidth="2px"
                         _hover={{ borderColor: 'blue.600' }}

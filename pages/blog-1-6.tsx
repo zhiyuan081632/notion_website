@@ -46,13 +46,24 @@ import Site from "@definitions/site";
 
 import Image from "@components/image";
 
-const AboutPage: React.FC = () => {
+// Google Analytics
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+
+const Blog16Page: React.FC = () => {
   const theme = useContext(ThemeColorContext);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
   const gray = useColorModeValue("gray.600", "gray.400");
   const lightGray = useColorModeValue("gray.50", "gray.900");
+
+  // Google Analytics
+  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
+  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+  useEffect(() => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
@@ -645,4 +656,4 @@ const CTA: React.FC<I_BlockProps> = ({ bodyColor }) => {
   );
 };
 
-export default AboutPage;
+export default Blog16Page;

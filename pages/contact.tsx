@@ -8,6 +8,7 @@ import {
   Box,
   chakra,
   Container,
+  Divider,
   Flex,
   Heading,
   Icon,
@@ -23,7 +24,19 @@ import Image from "@components/image";
 import ContactForm from "@blocks/contact-form";
 import CTA from "@blocks/cta";
 
+// Google Analytics
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+
 const ContactPage: React.FC = () => {
+
+  // Google Analytics
+  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
+  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+  useEffect(() => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <>
       <NextSeo title="Contact us" description="NotionTemplate.AI contact us" />
@@ -61,7 +74,7 @@ const ContactPage: React.FC = () => {
             </VStack>
           </Container>
         </Box>
-        <Container mt={-20} maxW="container.lg">
+        {/* <Container mt={-20} maxW="container.lg">
           <Box
             data-aos="fade-up"
             data-aos-delay="150"
@@ -69,9 +82,9 @@ const ContactPage: React.FC = () => {
             p={[4, 8, 10, 20]}
             bg={useColorModeValue("white", "gray.700")}
           >
-            {/* <ContactForm /> */}
+            <ContactForm />
           </Box>
-        </Container>
+        </Container> */}
 
         <Container
           zIndex={1}
@@ -88,7 +101,7 @@ const ContactPage: React.FC = () => {
             width="full"
             zIndex={-1}
             image={useColorModeValue(WorldMapDotLight, WorldMapDotDark)}
-          /> */}
+          />
           <Box
             left="50%"
             top="50%"
@@ -96,7 +109,7 @@ const ContactPage: React.FC = () => {
             pos="absolute"
             zIndex={-1}
           >
-            {/* <Image
+            <Image
               src={useColorModeValue(
                 "/images/world-map-dots-light.png",
                 "/images/world-map-dots-dark.png",
@@ -104,8 +117,8 @@ const ContactPage: React.FC = () => {
               width={720}
               height={405}
               alt="world map dot"
-            /> */}
-          </Box>
+            />
+          </Box> */}
 
           <Stack
             alignItems={["stretch", "stretch", "center"]}
@@ -155,7 +168,9 @@ const ContactPage: React.FC = () => {
                   {/* <Text>+1 216-342-3084</Text> */}
                   {/* <Link>Get directions</Link> */}
                 </VStack>
+                
               </Box>
+
             </Flex>
 
             {/* <Flex
