@@ -50,12 +50,21 @@ import Image from "@components/image";
 import CTA from "@blocks/cta";
 import { useState } from "react";
 
-
+ // Google Analytics
+import ReactGA from 'react-ga';
+const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; 
+ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+import { useEffect } from 'react';
 
 const Home3Page: React.FC = () => {
   const theme = useContext(ThemeColorContext);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
+
+  // Google Analytics
+  useEffect(() => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
@@ -66,37 +75,6 @@ const Home3Page: React.FC = () => {
       <chakra.main>
         <VStack spacing={[10, 10, 10, 0]}>
           <HeroBlock />
-          {/* <OverlayTwoBlock /> */}
-          {/* <ProductCarouselBlock /> */}
-          {/* <InfoBlock />
-          <GridProductBlock /> */}
-          {/* <AsFeaturedInBlock />  */}
-          {/* <ContentBlock
-            image="https://source.unsplash.com/lE85uDPmIL4"
-            title="Skin care"
-            body="Paullum deliquit, ponderibus modulisque suis ratio utitur. Cum ceteris in veneratione tui montes, nascetur mus. Nihil hic munitissimus habendi senatus locus, nihil horum? Gallia est omnis divisa in partes tres, quarum."
-            href="#"
-            linkText="Book an Appointment"
-          /> */}
-          {/* <SingleProductBlock /> */}
-          {/* <BlogBlock /> */}
-          {/* <Box width="full" pos="relative">
-            <Container pos="relative" zIndex={1} maxW="container.xl">
-              <CTA
-                data-aos="fade-up"
-                title="Start your & 7-day free trial"
-                subtitle="A simple everyday makeup routine, from the experts"
-              />
-            </Container>
-            <Box
-              zIndex={0}
-              bg="gray.900"
-              w="full"
-              pos="absolute"
-              h={52}
-              bottom={0}
-            />
-          </Box> */}
 
         <Divider borderColor="gray.600" />
         <Stack
@@ -327,7 +305,6 @@ const HeroBlock: React.FC<BlockProps> = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGptResponse = async () => {
-    
     // 定义ChatGPT API的URL
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
@@ -347,6 +324,14 @@ const HeroBlock: React.FC<BlockProps> = () => {
         "temperature": 0.7
       })
     };
+
+    // Google Analytics跟踪事件
+    ReactGA.event({
+      category: 'User Interaction',
+      action: 'Submitted Question',
+      label: userInput // 用户输入的问题
+    });
+    
 
     try {
       setIsLoading(true);
