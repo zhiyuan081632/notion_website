@@ -82,24 +82,36 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
     },
   };
 
+  // 获取github上代码更新时间
   const [lastUpdate, setLastUpdate] = useState<string | null>(null);
 
-  const getLatestUpdateTime = async () => {
-    // const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits?path=${filePath}`);
-    const response = await fetch(`https://api.github.com/repos/zhiyuan081632/notion_website/commits?path=pages/footer-1.tsx`);
-    const data = await response.json();
-    if (data.length > 0) {
-      return new Date(data[0].commit.committer.date).toLocaleDateString();  // 返回最后的更新日期
+  async function getLastUpdateTime(user: string, repo: string): Promise<string | null> {
+    const url = `https://api.github.com/repos/${user}/${repo}/commits/master`;
+    const response = await fetch(url, {
+        headers: {
+            "Accept": "application/vnd.github.v3+json"
+        }
+    });
+
+    if (!response.ok) {
+        console.error("请求错误:", response.statusText);
+        return null;
     }
-    return null;
-  };
+
+    const data = await response.json();
+    return data.commit.committer.date; // 返回最后的更新日期
+  }
+
+  const user = "zhiyuan081632";
+  const repo = "notion_website";
 
   useEffect(() => {
-    getLatestUpdateTime()
+    getLastUpdateTime(user, repo)
       .then(date => {
         setLastUpdate(date);
       });
   }, []); // 注意：这个空数组表示这个useEffect只会在组件挂载时运行一次
+
 
   return (
     <Box
@@ -210,12 +222,8 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
                 fontSize="sm"
                 textAlign={["center", "center", "start", "start"]}
               >
-                © All rights reserved. NotionTemplate.AI.
-                {lastUpdate && (
-                  <Text mt={4}>
-                    Last Update Time: {lastUpdate}
-                  </Text>
-                )}
+                © All rights reserved. NotionTemplate.AI.  
+                Update: {lastUpdate}
               </Text>
             </Stack>
             {/* <FooterIcons /> */}

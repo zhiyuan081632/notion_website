@@ -52,8 +52,6 @@ import { useState } from "react";
 
  // Google Analytics
 import ReactGA from 'react-ga';
-const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID: G-TBGDDBCWMQ
-ReactGA.initialize(GOOGLE_ANALYTICS_ID);
 import { useEffect } from 'react';
 
 const Home3Page: React.FC = () => {
@@ -62,6 +60,8 @@ const Home3Page: React.FC = () => {
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
   // Google Analytics
+  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID: G-TBGDDBCWMQ 
+  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
   useEffect(() => {
       ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
@@ -312,7 +312,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
     const requestOptions = {
       method: "POST",
       headers: {
-        "Authorization": `Bearer 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`, // 替换为你的OpenAI API密钥
+        "Authorization": `Bearer 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`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
