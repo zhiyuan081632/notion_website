@@ -52,7 +52,7 @@ import { useState } from "react";
 
  // Google Analytics
 import ReactGA from 'react-ga';
-const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; 
+const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID: G-TBGDDBCWMQ
 ReactGA.initialize(GOOGLE_ANALYTICS_ID);
 import { useEffect } from 'react';
 
@@ -390,7 +390,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                   bgGradient="linear(to-l, purple.500, magenta.400)"
                   bgClip="text"
                 >
-                  Notion Template
+                  Notion Template 
                 </Heading>
                 <Heading
                   data-aos="fade-up"
@@ -399,7 +399,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                   bgGradient="linear(to-l, purple.500, magenta.400)"
                   bgClip="text"
                 >
-                  for Every Task
+                  for Every Task 
                 </Heading>
                 <Heading
                   data-aos="fade-up"
@@ -464,5 +464,6 @@ const HeroBlock: React.FC<BlockProps> = () => {
     
   );
 };
+
 
 export default Home3Page;

@@ -44,6 +44,7 @@ import {
 } from "@components/payment-icons";
 import PrefersColorSchemeSelect from "@components/prefers-color-scheme";
 import SiteName from "@components/sitename";
+import { useEffect, useState } from 'react';
 
 const Footer1: React.FC<ChakraProps & ThemingProps> = ({
   // colorScheme,
@@ -80,6 +81,25 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
       bottom: -1,
     },
   };
+
+  const [lastUpdate, setLastUpdate] = useState<string | null>(null);
+
+  const getLatestUpdateTime = async () => {
+    // const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits?path=${filePath}`);
+    const response = await fetch(`https://api.github.com/repos/zhiyuan081632/notion_website/commits?path=pages/footer-1.tsx`);
+    const data = await response.json();
+    if (data.length > 0) {
+      return new Date(data[0].commit.committer.date).toLocaleDateString();  // 返回最后的更新日期
+    }
+    return null;
+  };
+
+  useEffect(() => {
+    getLatestUpdateTime()
+      .then(date => {
+        setLastUpdate(date);
+      });
+  }, []); // 注意：这个空数组表示这个useEffect只会在组件挂载时运行一次
 
   return (
     <Box
@@ -179,7 +199,7 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
 
           {/* <Divider borderColor="gray.600" /> */}
 
-          {/* <Stack
+          <Stack
             direction={["column", "column", "row"]}
             justify="space-between"
             width="full"
@@ -190,11 +210,16 @@ const Footer1: React.FC<ChakraProps & ThemingProps> = ({
                 fontSize="sm"
                 textAlign={["center", "center", "start", "start"]}
               >
-                © All rights reserved. AIDU.
+                © All rights reserved. NotionTemplate.AI.
+                {lastUpdate && (
+                  <Text mt={4}>
+                    Last Update Time: {lastUpdate}
+                  </Text>
+                )}
               </Text>
             </Stack>
-            <FooterIcons />
-          </Stack> */}
+            {/* <FooterIcons /> */}
+          </Stack>
           
         </VStack>
       </Container>
