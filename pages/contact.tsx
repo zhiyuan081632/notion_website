@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 
 import {
   Box,
+  Button,
   chakra,
   Container,
   Divider,
@@ -16,6 +17,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  useToast,
   VStack,
 } from "@chakra-ui/react";
 
@@ -26,7 +28,10 @@ import CTA from "@blocks/cta";
 
 // Google Analytics
 import ReactGA from 'react-ga';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+
+// cookies
+import { FcLock } from "@react-icons";
 
 const ContactPage: React.FC = () => {
 
@@ -36,6 +41,27 @@ const ContactPage: React.FC = () => {
   useEffect(() => {
       ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
+
+  // cookies
+  const toast = useToast();
+  const toastIdRef = useRef<string | number>();
+
+  const cookie = () =>
+  (toastIdRef.current = toast({
+    position: "bottom",
+    duration: null,
+    isClosable: true,
+    containerStyle: {
+      width: "full",
+      maxWidth: "4xl",
+    },
+    render: () => <SimpleCookiePreference toastRef={toastIdRef} />,
+  }));
+
+  useEffect(() => {
+    if (!toastIdRef.current) cookie();
+    return () => toast.close(toastIdRef.current);
+  });
 
   return (
     <>
@@ -216,6 +242,46 @@ const ContactPage: React.FC = () => {
         </Box> */}
       </chakra.main>
     </>
+  );
+};
+
+const SimpleCookiePreference: React.FC<{
+  toastRef: React.MutableRefObject<string | number>;
+}> = ({ toastRef }) => {
+  const toast = useToast();
+  return (
+    <Stack bg="white" p="4" boxShadow="lg" m="4" borderRadius="sm">
+      <Stack direction="row" alignItems="center">
+        <Text fontWeight="semibold">Your Privacy</Text>
+        <FcLock />
+      </Stack>
+
+      <Stack
+        direction={["column", "column", "row"]}
+        justifyContent="space-between"
+        align="center"
+        spacing={5}
+      >
+        <Text fontSize="sm" textAlign="left" maxW="4xl">
+          We use cookies and similar technologies to help personalise content,
+          tailor and measure ads, and provide a better experience. By clicking
+          OK or turning an option on in Cookie Preferences, you agree to this,
+          as outlined in our Cookie Policy. To change preferences or withdraw
+          consent, please update your Cookie Preferences.
+        </Text>
+        <Stack direction={["column", "column", "row"]}>
+          <Button variant="outline" colorScheme="green">
+            Cookie Preferences
+          </Button>
+          <Button
+            onClick={() => toast.close(toastRef.current)}
+            colorScheme="green"
+          >
+            OK
+          </Button>
+        </Stack>
+      </Stack>
+    </Stack>
   );
 };
 
