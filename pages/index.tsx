@@ -308,11 +308,15 @@ const HeroBlock: React.FC<BlockProps> = () => {
     // 定义ChatGPT API的URL
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
+    // 从环境变量中读取 API 密钥
+    const apiKey = process.env.NOTION_API_KEY;
+    console.log('API Key:', apiKey);
+
     // API请求的header和body
     const requestOptions = {
       method: "POST",
       headers: {
-        "Authorization": `Bearer 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`,
+        "Authorization": `Bearer ${apiKey}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -371,10 +375,6 @@ const HeroBlock: React.FC<BlockProps> = () => {
             alt="Notion home 3 hero"
           />
         </Flex>
-
-        
-
-      
 
         <Flex bg={useColorModeValue("gray.200", "gray.700")} flex="1">
           <Flex alignSelf="center" py={[10, 10, 0, 28]} px={[5, 5, 10, 20]}>
