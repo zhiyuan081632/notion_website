@@ -54,6 +54,9 @@ import { useState } from "react";
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
+require('dotenv').config(); // 加载 .env 文件
+
+
 const Home3Page: React.FC = () => {
   const theme = useContext(ThemeColorContext);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -304,13 +307,15 @@ const HeroBlock: React.FC<BlockProps> = () => {
   const [gptResponse, setGptResponse] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  
+
   const handleGptResponse = async () => {
     // 定义ChatGPT API的URL
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
     // 从环境变量中读取 API 密钥
-    const apiKey = process.env.NOTION_API_KEY;
-    console.log('API Key:', apiKey);
+    const apiKey = process.env.NOTION_API_KEY; 
+    console.log("API Key:", apiKey)
 
     // API请求的header和body
     const requestOptions = {
