@@ -54,17 +54,16 @@ import { useState } from "react";
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
-require('dotenv').config(); // 加载 .env 文件
-
-
 const Home3Page: React.FC = () => {
   const theme = useContext(ThemeColorContext);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
   // Google Analytics
-  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
-  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+  const google_id = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID; // Google Analytics ID
+  // console.log("google id:", google_id)
+  ReactGA.initialize(google_id);
+
   useEffect(() => {
       ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
@@ -307,15 +306,20 @@ const HeroBlock: React.FC<BlockProps> = () => {
   const [gptResponse, setGptResponse] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  
 
   const handleGptResponse = async () => {
     // 定义ChatGPT API的URL
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
     // 从环境变量中读取 API 密钥
-    const apiKey = process.env.NOTION_API_KEY; 
-    console.log("API Key:", apiKey)
+    const apiKey = process.env.NEXT_PUBLIC_NOTION_API_KEY; 
+    // console.log("API Key:", apiKey)
+
+    if (!apiKey) {
+      console.error("无法读取环境变量 NOTION_API_KEY");
+      // 进行错误处理
+      return;
+    }
 
     // API请求的header和body
     const requestOptions = {
