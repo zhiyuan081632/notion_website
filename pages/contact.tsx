@@ -35,12 +35,22 @@ import { FcLock } from "@react-icons";
 
 const ContactPage: React.FC = () => {
 
-  // Google Analytics
-  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
-  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
-  useEffect(() => {
-      ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
+// Google Analytics代码
+useEffect(() => {
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+  document.head.appendChild(script);
+
+  script.addEventListener('load', () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+  });
+}, []);
 
   // cookies
   const toast = useToast();
@@ -62,6 +72,8 @@ const ContactPage: React.FC = () => {
     if (!toastIdRef.current) cookie();
     return () => toast.close(toastIdRef.current);
   });
+
+  
 
   return (
     <>

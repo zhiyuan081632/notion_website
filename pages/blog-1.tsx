@@ -49,19 +49,29 @@ const Blog1Page: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
-  // Google Analytics
-  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
-  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+  // Google Analytics代码
   useEffect(() => {
-      ReactGA.pageview(window.location.pathname + window.location.search);
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+    document.head.appendChild(script);
+
+    script.addEventListener('load', () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+    });
   }, []);
 
   return (
     <>
-      {/* <NextSeo
-        title="Notion Template AI"
-        description="Notion Template AI Website"
-      /> */}
+      <NextSeo
+        title="Notion Template AI Blog1"
+        description="Notion Template AI Websit Blog1"
+      />
       <chakra.main>
         <VStack spacing={[10, 20, 32]}>
           <HeroBlock pt={28} pb={28} />

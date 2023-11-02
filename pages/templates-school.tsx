@@ -52,18 +52,28 @@ const Home: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
-  // Google Analytics
-  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
-  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+  // Google Analytics代码
   useEffect(() => {
-      ReactGA.pageview(window.location.pathname + window.location.search);
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+    document.head.appendChild(script);
+
+    script.addEventListener('load', () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+    });
   }, []);
 
   return (
     <>
       <NextSeo
-        title="Notion Template AI"
-        description="Notion Template AI Website"
+        title="Notion Template AI School"
+        description="Notion Template AI Website school template"
       />
       <chakra.main>
         <VStack mb={32} spacing={20}>

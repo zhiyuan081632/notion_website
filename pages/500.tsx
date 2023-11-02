@@ -25,11 +25,28 @@ const InternalServerErrorPage: React.FC = () => {
     if (event.button === 1) window.location.href = "/";
   };
 
+  // Google Analytics代码
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+    document.head.appendChild(script);
+
+    script.addEventListener('load', () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+    });
+  }, []);
+
   return (
     <>
-      <NextSeo
-        title="500 Internal Server Error"
-        description="Your request encountered an error, please try again in a while"
+<NextSeo
+        title="500 Page not found"
+        description="Notion Template AI Website 500 page"
       />
       <chakra.main>
         <Container maxW="container.xl" py={28}>

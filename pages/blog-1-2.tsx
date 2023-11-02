@@ -58,18 +58,28 @@ const Blog12Page: React.FC = () => {
   const gray = useColorModeValue("gray.600", "gray.400");
   const lightGray = useColorModeValue("gray.50", "gray.900");
 
-  // Google Analytics
-  const GOOGLE_ANALYTICS_ID = 'G-TBGDDBCWMQ'; // Google Analytics ID
-  ReactGA.initialize(GOOGLE_ANALYTICS_ID);
+  // Google Analytics代码
   useEffect(() => {
-      ReactGA.pageview(window.location.pathname + window.location.search);
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+    document.head.appendChild(script);
+
+    script.addEventListener('load', () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+    });
   }, []);
 
   return (
     <>
       <NextSeo
-        title="blog-1-3"
-        description="About Notion Template AI Websit"
+        title="Notion Template AI Blog1-2"
+        description="Notion Template AI Websit Blog1-2"
       />
       <chakra.main>
         <VStack align="stretch" mb={32} spacing={32}>

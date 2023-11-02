@@ -51,7 +51,6 @@ import CTA from "@blocks/cta";
 import { useState } from "react";
 
 // Google Analytics
-import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
 const Home3Page: React.FC = () => {
@@ -59,13 +58,21 @@ const Home3Page: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
-  // Google Analytics
-  const google_id = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID; // Google Analytics ID
-  // console.log("google id:", google_id)
-  ReactGA.initialize(google_id);
-
+  // Google Analytics代码
   useEffect(() => {
-      ReactGA.pageview(window.location.pathname + window.location.search);
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+    document.head.appendChild(script);
+
+    script.addEventListener('load', () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+    });
   }, []);
 
   return (
@@ -338,26 +345,29 @@ const HeroBlock: React.FC<BlockProps> = () => {
       })
     };
 
-    // Google Analytics跟踪事件
-    ReactGA.event({
-      category: 'User Interaction',
-      action: 'Submitted Question',
-      label: userInput // 用户输入的问题
-    });
-    
-
     try {
       setIsLoading(true);
       const response = await fetch(API_URL, requestOptions);
       const data = await response.json();
       setGptResponse(`${data.choices[0]['message']['content']}`);
+
+      // 添加Google Analytics事件跟踪代码
+      if (window.gtag) {
+        window.gtag('event', 'AI_Response', {
+          event_category: 'User Interaction',
+          event_label: 'GPT Response',
+        });
+      }
+
     } catch (error) {
       console.error("与OpenAI API通信时发生错误：", error);
       setGptResponse("发生了错误，请稍后再试");
     } finally {
       setIsLoading(false);
     }
+
   };
+
 
   return (
     <Box width="full">
@@ -434,7 +444,7 @@ const HeroBlock: React.FC<BlockProps> = () => {
                 <Stack direction="row" spacing={4} align="center">
                     <Input
                         type="text"
-                        placeholder="Ask AI some questions"
+                        placeholder="Ask AI question about Notion, eg. how to duplicate  a Notion template?"
                         borderColor="blue.500"
                         borderWidth="2px"
                         _hover={{ borderColor: 'blue.600' }}

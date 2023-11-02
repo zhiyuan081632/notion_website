@@ -14,6 +14,8 @@ import {
 
 import { ThemeColorContext } from "@definitions/context/theme";
 import Site from "@definitions/site";
+// Google Analytics
+import { useEffect } from 'react';
 
 const PageNotFoundPage: React.FC = () => {
   const theme = useContext(ThemeColorContext);
@@ -25,11 +27,28 @@ const PageNotFoundPage: React.FC = () => {
     if (event.button === 1) window.location.href = "/";
   };
 
+  // Google Analytics代码
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+    document.head.appendChild(script);
+
+    script.addEventListener('load', () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+    });
+  }, []);
+
   return (
     <>
       <NextSeo
         title="404 Page not found"
-        description="Page not found, It appears that the page you were searching for no longer exists."
+        description="Notion Template AI Website 404 page"
       />
       <chakra.main>
         <Container maxW="container.xl" py={28}>
