@@ -62,16 +62,16 @@ const Blog16Page: React.FC = () => {
   useEffect(() => {
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`; // 使用环境变量替代跟踪ID
     document.head.appendChild(script);
 
     script.addEventListener('load', () => {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
       }
       gtag('js', new Date());
-      gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+      gtag('config', process.env.NEXT_PUBLIC_GA_ID); // 使用环境变量替代跟踪ID
     });
   }, []);
 

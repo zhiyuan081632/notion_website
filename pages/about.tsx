@@ -47,8 +47,8 @@ import Site from "@definitions/site";
 import Image from "@components/image";
 
 // Google Analytics
-import ReactGA from 'react-ga';
 import { useEffect } from 'react';
+
 
 const AboutPage: React.FC = () => {
   const theme = useContext(ThemeColorContext);
@@ -62,18 +62,19 @@ const AboutPage: React.FC = () => {
   useEffect(() => {
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TBGDDBCWMQ'; // 替换为您的Google Analytics跟踪ID
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`; // 使用环境变量替代跟踪ID
     document.head.appendChild(script);
 
     script.addEventListener('load', () => {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
       }
       gtag('js', new Date());
-      gtag('config', 'G-TBGDDBCWMQ'); // 替换为您的Google Analytics跟踪ID
+      gtag('config', process.env.NEXT_PUBLIC_GA_ID); // 使用环境变量替代跟踪ID
     });
   }, []);
+
 
   return (
     <>
@@ -90,24 +91,6 @@ const AboutPage: React.FC = () => {
           <VStack>
             <Divider maxW="30rem" />
           </VStack>
-          {/* <ContentBox
-            bodyColor={gray}
-            subtitle="Our Community"
-            title="We have a creative community"
-            body="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum ceteris in veneratione tui montes, nascetur mus. Cras mattis iudicium purus sit amet fermentum. At nos hinc posthac, sitientis piros Afros. Magna pars studiorum, prodita quaerimus."
-            image="/images/team-3.jpg"
-          />
-          <ContentBox
-            bodyColor={gray}
-            direction={["column", "column", "row-reverse"]}
-            subtitle="Open Source Community"
-            title="We grow with open collaboration"
-            body="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum ceteris in veneratione tui montes, nascetur mus. Cras mattis iudicium purus sit amet fermentum. At nos hinc posthac, sitientis piros Afros. Magna pars studiorum, prodita quaerimus."
-            image="/images/team-6.jpg"
-          /> */}
-          {/* <Team bodyColor={gray} />
-          <LearnMoreAboutUs bg={lightGray} bodyColor={gray} />
-          <CTA bodyColor={gray} /> */}
         </VStack>
       </chakra.main>
     </>
