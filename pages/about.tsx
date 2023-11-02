@@ -75,6 +75,18 @@ const AboutPage: React.FC = () => {
     });
   }, []);
 
+  // 百度统计代码
+  useEffect(() => {
+    var _hmt = ([] as any[]);
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?d3848da2c7ddc573652df9b8bcc6962b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  }, []);
+  
+
 
   return (
     <>
