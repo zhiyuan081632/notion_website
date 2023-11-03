@@ -14,8 +14,6 @@ import {
 
 import { ThemeColorContext } from "@definitions/context/theme";
 import Site from "@definitions/site";
-// Google Analytics
-import { useEffect } from 'react';
 
 const PageNotFoundPage: React.FC = () => {
   const theme = useContext(ThemeColorContext);
@@ -26,24 +24,6 @@ const PageNotFoundPage: React.FC = () => {
     if (event.button === 0) window.location.href = "/";
     if (event.button === 1) window.location.href = "/";
   };
-
-  // Google Analytics代码
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`; // 使用环境变量替代跟踪ID
-    document.head.appendChild(script);
-
-    script.addEventListener('load', () => {
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      function gtag(...args: any[]) {
-        (window as any).dataLayer.push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', process.env.NEXT_PUBLIC_GA_ID); // 使用环境变量替代跟踪ID
-    });
-  }, []);
-
 
   return (
     <>

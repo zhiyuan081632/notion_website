@@ -58,34 +58,33 @@ const Home3Page: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themeColorScheme = theme.colorScheme; // global default primary theme color
 
-  // Google Analytics代码
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`; // 使用环境变量替代跟踪ID
-    document.head.appendChild(script);
+  // // Google Analytics代码
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.async = true;
+  //   script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`; // 使用环境变量替代跟踪ID
+  //   document.head.appendChild(script);
 
-    script.addEventListener('load', () => {
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      function gtag(...args: any[]) {
-        (window as any).dataLayer.push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', process.env.NEXT_PUBLIC_GA_ID); // 使用环境变量替代跟踪ID
-    });
-  }, []);
+  //   script.addEventListener('load', () => {
+  //     (window as any).dataLayer = (window as any).dataLayer || [];
+  //     function gtag(...args: any[]) {
+  //       (window as any).dataLayer.push(args);
+  //     }
+  //     gtag('js', new Date());
+  //     gtag('config', process.env.NEXT_PUBLIC_GA_ID); // 使用环境变量替代跟踪ID
+  //   });
+  // }, []);
 
-  // 百度统计代码
-  useEffect(() => {
-    var _hmt = ([] as any[]);
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?577db1d220d9599402b30c9355472d1e";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  }, []);
-
+  // // 百度统计代码
+  // useEffect(() => {
+  //   var _hmt = ([] as any[]);
+  //   (function() {
+  //     var hm = document.createElement("script");
+  //     hm.src = "https://hm.baidu.com/hm.js?577db1d220d9599402b30c9355472d1e";
+  //     var s = document.getElementsByTagName("script")[0];
+  //     s.parentNode.insertBefore(hm, s);
+  //   })();
+  // }, []);
 
 
   return (

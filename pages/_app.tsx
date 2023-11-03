@@ -35,6 +35,9 @@ import "@styles/global.scss";
 
 import SEO from "../next-seo.config";
 
+
+import { useRouter } from 'next/router';
+
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {
     PageLayout?: React.ComponentType<{ children: React.ReactNode }>;
@@ -48,6 +51,19 @@ const createEmotionCache = () => {
 
 const clientSideEmotionCache = createEmotionCache();
 
+
+// 添加百度统计代码
+const initBaiduStatistics = () => {
+  var _hmt = ([] as any[]);
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?577db1d220d9599402b30c9355472d1e";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+};
+
+
 function SencoApp({
   Component,
   emotionCache = clientSideEmotionCache,
@@ -59,7 +75,26 @@ function SencoApp({
       once: true,
       offset: 50,
     });
+
+  // 初始化百度统计代码
+  initBaiduStatistics();
+
   }, []);
+
+  // Google Analytics
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID as string, {
+        page_path: url,
+      });
+    }
+    
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    }
+  }, [router.events]);
 
   return (
     <CacheProvider value={emotionCache}>

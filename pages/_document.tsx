@@ -19,13 +19,31 @@ const createEmotionCache = () => {
   return createCache({ key: "css" });
 };
 
+// Importing the Google Analytics Measurement ID from the environment variable
+const gtag = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+
 class CustomDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          {/* Google Analytics Measurement ID*/}
+          <script async src={gtag} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  page_path: window.location.pathname
+                });
+              `,
+            }}
+          />
+        </Head>
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          {/* <ColorModeScript initialColorMode={theme.config.initialColorMode} /> */}
           <Main />
           <NextScript />
         </body>

@@ -46,10 +46,6 @@ import Site from "@definitions/site";
 
 import Image from "@components/image";
 
-// Google Analytics
-import ReactGA from 'react-ga';
-import { useEffect } from 'react';
-
 const Blog16Page: React.FC = () => {
   const theme = useContext(ThemeColorContext);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -58,22 +54,6 @@ const Blog16Page: React.FC = () => {
   const gray = useColorModeValue("gray.600", "gray.400");
   const lightGray = useColorModeValue("gray.50", "gray.900");
 
-  // Google Analytics代码
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`; // 使用环境变量替代跟踪ID
-    document.head.appendChild(script);
-
-    script.addEventListener('load', () => {
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      function gtag(...args: any[]) {
-        (window as any).dataLayer.push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', process.env.NEXT_PUBLIC_GA_ID); // 使用环境变量替代跟踪ID
-    });
-  }, []);
 
   return (
     <>

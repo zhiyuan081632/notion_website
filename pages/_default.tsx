@@ -15,7 +15,7 @@ const DefaultPage: React.FC = () => {
     <>
       <NextSeo
         title="Notion Template AI"
-        description="Notion Template Website"
+        description="Notion Template Website Default"
       />
       <chakra.main>
         <VStack mb={32} spacing={32}>
